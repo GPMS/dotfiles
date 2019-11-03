@@ -168,8 +168,12 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id udiskie -2 &
 # Start authorization agent
 exec --no-startup-id lxpolkit
+# Start notification daemon
+exec --no-startup-id dunst
 # Start e-mail manager
 exec --no-startup-id $HOME/Scripts/open_email_client.sh
+# Start battery notifications
+exec --no-startup-id $HOME/Scripts/battery_notifications.sh
 
 ## Aditional Bindings ##
 # call program launcher (rofi)
