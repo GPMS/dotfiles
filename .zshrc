@@ -84,6 +84,8 @@ alias ping='ping -c 5 '
 
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 
+bindkey -v
+
 
 PATH="/home/gabriel/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/gabriel/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
