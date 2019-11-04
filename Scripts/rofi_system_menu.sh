@@ -18,7 +18,7 @@ case $selection in
     $restart)
         i3-msg restart;;
     $quit)
-        i3-msg quit;;
+        i3-msg exit;;
     $suspend)
         systemctl suspend -i;;
     $reboot)
