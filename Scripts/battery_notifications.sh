@@ -8,7 +8,7 @@ do
     if [[ $isCharging -eq 1 && $batteryLevel -eq 100 ]]
     then
         dunstify -t 3000 "Charge full"
-    elif [[ $isCharging -eq 0 && $batteryLevel -lt 30 ]]
+    elif [[ $isCharging -eq 0 && $batteryLevel -le 15 ]]
     then
         dunstify -t 3000 "Battery low..."
     fi
