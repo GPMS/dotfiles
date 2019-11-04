@@ -7,6 +7,7 @@ set shortmess=I
 syntax on
 set background=dark
 colorscheme molokai
+set t_Co=256
 "set termguicolors
 
 filetype plugin indent on
