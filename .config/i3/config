@@ -1,6 +1,6 @@
 ## Basic Definitions ##
 
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 3
 gaps inner 5
 gaps outer 5
 set $term --no-startup-id urxvt
@@ -37,7 +37,7 @@ bindsym $mod+Shift+b            exec firefox
 bindsym $mod+d                  exec rofi -show drun
 #bindsym $mod+Shift+d
 
-bindsym $mod+e                  toggle split
+bindsym $mod+e                  layout toggle split
 #bindsym $mod+Shift+e
 
 bindsym $mod+f                  fullscreen toggle
@@ -50,7 +50,7 @@ bindsym $mod+h                  left
 bindsym $mod+Shift+h            move left
 
 #bindsym $mod+i
-bindsym $mod+Shift+i            $HOME/Scripts/i3resize.sh up
+bindsym $mod+Shift+i            exec $HOME/Scripts/i3resize.sh up
 
 bindsym $mod+j                  down
 bindsym $mod+Shift+j            move down
@@ -68,7 +68,7 @@ bindsym $mod+Shift+l            move right
 #bindsym $mod+Shift+n
 
 #bindsym $mod+o
-bindsym $mod+Shift+o            $HOME/Scripts/i3resize.sh up
+bindsym $mod+Shift+o            exec $HOME/Scripts/i3resize.sh right
 
 #bindsym $mod+p
 #bindsym $mod+Shift+p
@@ -86,7 +86,7 @@ bindsym $mod+t                  split toggle
 #bindsym $mod+Shift+t
 
 #bindsym $mod+u
-bindsym $mod+Shift+u            $HOME/Scripts/i3resize.sh down
+bindsym $mod+Shift+u            exec $HOME/Scripts/i3resize.sh down
 
 #bindsym $mod+v
 #bindsym $mod+Shift+v
@@ -98,7 +98,7 @@ bindsym $mod+w                  layout tabbed
 #bindsym $mod+Shift+x
 
 #bindsym $mod+y
-bindsym $mod+Shift+y            $HOME/Scripts/i3resize.sh left
+bindsym $mod+Shift+y            exec $HOME/Scripts/i3resize.sh left
 
 #bindsym $mod+z
 #Cbindsym $mod+Shift+z
