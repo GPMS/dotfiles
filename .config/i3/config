@@ -48,19 +48,19 @@ bindsym $mod+Shift+f            exec nemo
 #bindsym $mod+g
 #bindsym $mod+Shift+g
 
-bindsym $mod+h                  left
+bindsym $mod+h                  focus left
 bindsym $mod+Shift+h            move left
 
 #bindsym $mod+i
 bindsym $mod+Shift+i            exec $HOME/Scripts/i3resize.sh up
 
-bindsym $mod+j                  down
+bindsym $mod+j                  focus down
 bindsym $mod+Shift+j            move down
 
-bindsym $mod+k                  up
+bindsym $mod+k                  focus up
 bindsym $mod+Shift+k            move up
 
-bindsym $mod+l                  right
+bindsym $mod+l                  focus right
 bindsym $mod+Shift+l            move right
 
 #bindsym $mod+m
