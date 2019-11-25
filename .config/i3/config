@@ -16,6 +16,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id udiskie -2 &
 exec --no-startup-id lxpolkit
 exec --no-startup-id dunst
+exec --no-startup-id fcitx -d
 exec --no-startup-id $HOME/Scripts/open_email_client.sh
 exec --no-startup-id $HOME/Scripts/battery_notifications.sh
 
