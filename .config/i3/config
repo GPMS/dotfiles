@@ -10,7 +10,7 @@ set $mod Mod4
 
 ## Autostart ##
 
-exec --no-startup-id feh --bg-scale /$HOME/Images/wallpaper.jpg
+exec --no-startup-id feh --bg-scale /$HOME/Wallpapers/1.jpg
 exec --no-startup-id nm-applet
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id udiskie -2 &
