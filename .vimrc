@@ -7,7 +7,7 @@ if empty(glob('$HOME/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('$HOME/.vim/plugged')
-Plug 'crusoexia/vim-monokai'
+Plug 'ajmwagar/vim-deus'
 call plug#end()
 """"""""""""""" General Configuration """""""""""""""
 " Make Vim more useful
@@ -18,7 +18,7 @@ set shortmess=I
 " Syntax Colors
 syntax on
 set background=dark
-colorscheme monokai
+colors deus
 set t_Co=256
 "set termguicolors
 
