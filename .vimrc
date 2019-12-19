@@ -18,7 +18,7 @@ set shortmess=I
 " Syntax Colors
 syntax on
 set background=dark
-colors deus
+colorscheme deus
 set t_Co=256
 "set termguicolors
 
