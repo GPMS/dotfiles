@@ -1,3 +1,15 @@
+""""""""""""""" Plugins """""""""""""""
+" Install vim-plug automatically if not installed
+if empty(glob('$HOME/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $HOME/.vimrc
+endif
+
+call plug#begin('$HOME/.vim/plugged')
+Plug 'crusoexia/vim-monokai'
+call plug#end()
+""""""""""""""" General Configuration """""""""""""""
 " Make Vim more useful
 set nocompatible
 " Disable vim welcome message
@@ -6,7 +18,7 @@ set shortmess=I
 " Syntax Colors
 syntax on
 set background=dark
-colorscheme molokai
+colorscheme monokai
 set t_Co=256
 "set termguicolors
 
