@@ -3,3 +3,7 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export GTK_IM_MODULE=fcitx
 
+export LANG=en_GB.UTF-8
+export EDITOR='vim'
+export TERMINAL='urxvt'
+export BROWSER='firefox'
