@@ -1,0 +1,8 @@
+alias update='yay -Syu --devel'
+alias search='yay -Ss'
+alias clean='yay -Rsnu $(yay -Qqdt); yay -Sc'
+alias install='yay -S'
+alias remove='yay -Rsu'
+alias ping='ping -c 5 '
+
+alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'

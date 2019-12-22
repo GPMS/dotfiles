@@ -69,23 +69,11 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+source $HOME/.alias
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
-
-export LANG=en_GB.UTF-8
-export EDITOR='vim'
-export TERMINAL='urxvt'
-export BROWSER='firefox'
-
-alias update='yay -Syu --devel'
-alias search='yay -Ss'
-alias clean='yay -Rsnu $(yay -Qqdt); yay -Sc'
-alias install='yay -S'
-alias remove='yay -Rsu'
-alias ping='ping -c 5 '
-
-alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 
 bindkey -v
 
