@@ -10,5 +10,7 @@ alias polybarconfig='$EDITOR $HOME/config/polybar/config'
 alias aliases='$EDITOR $HOME/.aliases'
 alias zshrc='$EDITOR $HOME/.zshrc'
 alias profile='$EDITOR $HOME/.profile'
+alias vimrc='$EDITOR $HOME/.vimrc'
 
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+
