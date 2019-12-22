@@ -69,7 +69,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-source $HOME/.alias
+source $HOME/.aliases
 
 # User configuration
 
