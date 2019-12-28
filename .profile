@@ -5,5 +5,5 @@ export GTK_IM_MODULE=fcitx
 
 export LANG=en_GB.UTF-8
 export EDITOR='vim'
-export TERMINAL='urxvt'
+export TERM='urxvt'
 export BROWSER='firefox'
