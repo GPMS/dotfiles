@@ -18,12 +18,11 @@ set shortmess=I             " Disable vim welcome message
 syntax on
 set background=dark
 colorscheme deus
-set t_Co=256                "set termguicolors
 
 filetype plugin indent on
 
-set clipboard=unnamedplus   " Use the OS clipboard by default (on versions compiled
-                            " with `+clipboard`)
+set clipboard=unnamedplus   " Use the OS clipboard by default (on versions
+                            " compiled with `+clipboard`)
 let mapleader=","           " Change mapleader
 
 " Enable relative line numbers
@@ -32,14 +31,20 @@ set relativenumber
 
 set cursorline              " Highlight the line the cursor is on
 
+" Ruler at column 80
+set colorcolumn=80
+highlight ColorColumn ctermbg=236 guibg=black
+
 " Search
 set gdefault                " Add the g flag to search/replace by default
 set hlsearch                " Highlight search results
 map <Space> :noh<cr>
+
 set incsearch               " Start searching without having to press Enter
 set ignorecase              " Ignore case of searches
 
-set nostartofline           " Do not reset cursor to start of line when moving around
+set nostartofline           " Do not reset cursor to start of line when
+                            " moving around
 set showcmd                 " Show the (partial) command as it is being typed
 
 " More natural splitting of windows
@@ -47,7 +52,7 @@ set splitbelow
 set splitright
 
 set lazyredraw
-set showmatch           " Highlight closing bracket
+set showmatch               " Highlight closing bracket
 
 " Identation
 set autoindent
