@@ -1,3 +1,4 @@
+# vim: filetype=sh
 alias update='yay -Syu --devel'
 alias search='yay -Ss'
 alias clean='yay -Rsnu $(yay -Qqdt); yay -Sc'
