@@ -32,8 +32,8 @@ set relativenumber
 set cursorline              " Highlight the line the cursor is on
 
 " Ruler at column 80
-set colorcolumn=80
-highlight ColorColumn ctermbg=236 guibg=black
+let &colorcolumn=join(range(81,999),",")
+highlight ColorColumn ctermbg=239 guibg=black
 
 " Search
 set gdefault                " Add the g flag to search/replace by default
