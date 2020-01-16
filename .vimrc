@@ -33,7 +33,7 @@ set cursorline              " Highlight the line the cursor is on
 
 " Ruler at column 80
 let &colorcolumn=join(range(81,999),",")
-highlight ColorColumn ctermbg=239 guibg=black
+highlight ColorColumn ctermbg=234 guibg=black
 
 " Search
 set gdefault                " Add the g flag to search/replace by default
