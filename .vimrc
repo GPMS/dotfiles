@@ -11,8 +11,11 @@ Plug 'ajmwagar/vim-deus'
 call plug#end()
 
 """"""""""""""" General Configuration """""""""""""""
-set nocompatible            " Make Vim more useful
-set shortmess=I             " Disable vim welcome message
+" Make Vim more useful
+set nocompatible
+
+" Disable vim welcome message
+set shortmess=I
 
 " Syntax Colors
 syntax on
@@ -21,38 +24,49 @@ colorscheme deus
 
 filetype plugin indent on
 
-set clipboard=unnamedplus   " Use the OS clipboard by default (on versions
-                            " compiled with `+clipboard`)
-let mapleader=","           " Change mapleader
+" Use the OS clipboard by default (on versions compiled with `+clipboard`)
+set clipboard=unnamedplus
+
+let mapleader=","
 
 " Enable relative line numbers
 set number
 set relativenumber
 
-set cursorline              " Highlight the line the cursor is on
+" Highlight the line the cursor is on
+set cursorline
 
 " Ruler at column 80
 let &colorcolumn=join(range(81,999),",")
 highlight ColorColumn ctermbg=234 guibg=black
 
 " Search
-set gdefault                " Add the g flag to search/replace by default
-set hlsearch                " Highlight search results
+
+" Add the g flag to search/replace by default
+set gdefault
+" Highlight search results
+set hlsearch
+" Clear highlight
 map <Space> :noh<cr>
+" Start searching without having to press Enter
+set incsearch
+" Ignore case of searches
+set ignorecase
 
-set incsearch               " Start searching without having to press Enter
-set ignorecase              " Ignore case of searches
+" Do not reset cursor to start of line when moving around
+set nostartofline
 
-set nostartofline           " Do not reset cursor to start of line when
-                            " moving around
-set showcmd                 " Show the (partial) command as it is being typed
+" Show the (partial) command as it is being typed
+set showcmd
 
 " More natural splitting of windows
 set splitbelow
 set splitright
 
 set lazyredraw
-set showmatch               " Highlight closing bracket
+
+" Highlight closing bracket
+set showmatch
 
 " Identation
 set autoindent
@@ -66,9 +80,3 @@ set expandtab
 if has("autocmd")
     autocmd BufWritePre * %s/\s\+$//e
 endif
-
-noremap H ^
-noremap L $
-noremap ^ H
-noremap $ L
-
