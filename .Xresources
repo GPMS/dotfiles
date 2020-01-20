@@ -36,9 +36,9 @@
 *.color15:      #fcfdfe
 
 !! URxvt Appearance
-URxvt.font:             xft:Ubuntu Mono:style=Regular:pixelsize=17
-URxvt.boldFont:		    xft:Ubuntu Mono:style=Bold:pixelsize=17
-URxvt.italicFont: 	    xft:Ubuntu Mono:style=Italic:pixelsize=17
+URxvt.font:             xft:JetBrains Mono:style=Regular:pixelsize=17
+URxvt.boldFont:		    xft:JetBrains Mono:style=Bold:pixelsize=17
+URxvt.italicFont: 	    xft:JetBrains Mono:style=Italic:pixelsize=17
 URxvt.boldItalicfont: 	-*-rissole-*
 
 URxvt.letterSpace:      0
