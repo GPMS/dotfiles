@@ -1,3 +1,4 @@
+alacritty
 audacious
 autoconf
 automake
@@ -5,7 +6,10 @@ base
 bash
 binutils
 bison
+broot
 bzip2
+clang
+cmake
 cmus
 code
 coreutils
@@ -54,6 +58,7 @@ gvim
 gzip
 i3-gaps
 inetutils
+inotify-tools
 intel-ucode
 iproute2
 iputils
@@ -108,6 +113,7 @@ procps-ng
 psmisc
 pulseaudio
 pulseaudio-alsa
+python-pip
 qbittorrent
 reflector
 reiserfsprogs
@@ -150,6 +156,7 @@ thunar
 thunderbird
 tldr
 traceroute
+transset-df
 ttf-jetbrains-mono
 ttf-liberation
 ttf-ubuntu-font-family
@@ -171,11 +178,13 @@ xorg-fonts-misc
 xorg-server
 xorg-xbacklight
 xorg-xconsole
+xorg-xfontsel
 xorg-xinit
 xorg-xkill
 xorg-xrandr
 xorg-xwininfo
 xsensors
+xterm
 zathura-pdf-mupdf
 zip
 zsh
