@@ -4,6 +4,8 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="/home/gabriel/.oh-my-zsh"
 
+[ -n "$XTERM_VERSION" ] && transset-df --id "$WINDOWID" >/dev/null
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -83,3 +85,5 @@ PERL5LIB="/home/gabriel/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5L
 PERL_LOCAL_LIB_ROOT="/home/gabriel/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/gabriel/perl5\""; export PERL_MB_OPT;
 
+
+source /home/gabriel/.config/broot/launcher/bash/br
