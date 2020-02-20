@@ -7,8 +7,19 @@ if empty(glob('$HOME/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('$HOME/.vim/plugged')
-Plug 'ajmwagar/vim-deus'
+    Plug 'ajmwagar/vim-deus'
+    Plug 'jiangmiao/auto-pairs'
+    Plug 'ycm-core/YouCompleteMe'
+    Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
+
+"Auto-Pairs
+let g:AutoPairsFlyMode = 1
+let g:AutoPairsShortcutBackInsert = '<M-b>'
+
+"YouCompleteMe
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
 """"""""""""""" General Configuration """""""""""""""
 " Make Vim more useful
@@ -75,7 +86,17 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+" Enable Alt key
+let c='a'
+while c <= 'z'
+  exec "set <A-".c.">=\e".c
+  exec "imap \e".c." <A-".c.">"
+  let c = nr2char(1+char2nr(c))
+endw
+set ttimeout ttimeoutlen=50
+
 " Strip trailing whitespaces on save
 if has("autocmd")
     autocmd BufWritePre * %s/\s\+$//e
 endif
+
