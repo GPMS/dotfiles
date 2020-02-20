@@ -8,9 +8,14 @@ endif
 
 call plug#begin('$HOME/.vim/plugged')
     Plug 'ajmwagar/vim-deus'
+    Plug 'vim-airline/vim-airline'
+    Plug 'preservim/nerdtree'
+    Plug 'ryanoasis/vim-devicons'
     Plug 'jiangmiao/auto-pairs'
     Plug 'ycm-core/YouCompleteMe'
     Plug 'ctrlpvim/ctrlp.vim'
+    Plug 'majutsushi/tagbar'
+    Plug 'Yggdroot/indentLine'
 call plug#end()
 
 "Auto-Pairs
@@ -20,6 +25,13 @@ let g:AutoPairsShortcutBackInsert = '<M-b>'
 "YouCompleteMe
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+
+"NERDTree
+let g:NERDTreeMapActivateNode = "l"
+nmap <F1> :NERDTreeToggle<CR>
+
+"Tagbar
+nmap <F2> :TagbarToggle<CR>
 
 """"""""""""""" General Configuration """""""""""""""
 " Make Vim more useful
@@ -34,6 +46,8 @@ set background=dark
 colorscheme deus
 
 filetype plugin indent on
+
+set encoding=UTF-8
 
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamedplus
