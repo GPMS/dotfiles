@@ -31,7 +31,6 @@ let mapleader=","
 
 " Enable relative line numbers
 set number
-set relativenumber
 
 " Highlight the line the cursor is on
 set cursorline
