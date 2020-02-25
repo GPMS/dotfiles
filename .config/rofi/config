@@ -57,7 +57,7 @@ rofi.terminal:                         alacritty
 ! "Set case-sensitivity" Set from: Default
 ! rofi.case-sensitive:                 false
 ! "Cycle through the results list" Set from: Default
-! rofi.cycle:                          true
+rofi.cycle:                            true
 ! "Enable sidebar-mode" Set from: Default
 ! rofi.sidebar-mode:                   false
 ! "Row height (in chars)" Set from: Default
