@@ -2,6 +2,12 @@
 
 while :
 do
+    # Stop if there is no battery
+    if [ -z $(acpi -b) ]
+    then
+        break
+    fi
+
     batteryLevel=$(acpi -b |cut -d ' ' -f4| grep -o '[0-9]*')
     isCharging=$(acpi -b | grep -c "Charging")
 
