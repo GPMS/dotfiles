@@ -60,7 +60,7 @@ font-1 = unifont:fontformat=truetype:size=10:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = i3 cpu temperature memory
-modules-center = mpd
+modules-center = music
 modules-right = xbacklight pulseaudio xkeyboard wlan eth battery date
 
 tray-position = right
@@ -137,23 +137,23 @@ label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
-[module/mpd]
-type = internal/mpd
+[module/music]
+type = custom/script
 
-host = localhost
-port = 6600
+exec = ~/.config/polybar/music.sh
+exec-if = pgrep -x mpd
+interval = 1
 
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
-format-offline = <label-offline>
+click-left = mpc next
+click-right = mpc prev
+click-middle = mpc toggle
+scroll-up = mpc volume +5
+scroll-down = mpc volume -5
 
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
-
-label-song-ellipsis = true
-label-offline = 🎜 mpd is offline
+label-font = 3
+format = <label>
+format-underline = ${colors.foreground-alt}
+label = %output%
 
 [module/xbacklight]
 type = internal/xbacklight
