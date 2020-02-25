@@ -9,7 +9,7 @@ find *Instrumental* -name "*.flac" | sort -V > playlists/Instrumental.m3u
 
 # Get all unique names
 all=$(echo -e `find . -name "*.flac" -printf '%P\n' | cut -d "-" -f 1 | sort | uniq`)
-IFS=', ' read -r -a series <<< $all
+IFS=' ' read -r -a series <<< $all
 
 # Add all files
 for item in "${series[@]}"; do
