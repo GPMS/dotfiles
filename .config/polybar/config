@@ -60,7 +60,7 @@ font-1 = unifont:fontformat=truetype:size=10:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = i3 cpu temperature memory
-modules-center = cmus
+modules-center = mpd
 modules-right = xbacklight pulseaudio xkeyboard wlan eth battery date
 
 tray-position = right
@@ -139,7 +139,12 @@ label-unmounted-foreground = ${colors.foreground-alt}
 
 [module/mpd]
 type = internal/mpd
+
+host = localhost
+port = 6600
+
 format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+format-offline = <label-offline>
 
 icon-prev = 
 icon-stop = 
@@ -147,8 +152,8 @@ icon-play = 
 icon-pause = 
 icon-next = 
 
-label-song-maxlen = 25
 label-song-ellipsis = true
+label-offline = 🎜 mpd is offline
 
 [module/xbacklight]
 type = internal/xbacklight
@@ -166,16 +171,6 @@ bar-fill-foreground = #9f78e1
 bar-empty = ─
 bar-empty-font = 2
 bar-empty-foreground = ${colors.foreground-alt}
-
-[module/cmus]
-type = custom/script
-exec = $HOME/.config/polybar/polybar-scripts/player-cmus/player-cmus.sh
-interval = 1
-click-left = cmus-remote --next &
-click-middle = cmus-remote --pause &
-click-right = cmus-remote --prev &
-scroll-up = cmus-remote --volume +10% &
-scroll-down = cmus-remote --volume -10% &
 
 [module/pulseaudio]
 type = internal/pulseaudio
