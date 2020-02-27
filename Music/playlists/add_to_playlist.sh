@@ -15,5 +15,5 @@ IFS=' ' read -r -a series <<< $all
 # Add all files
 for item in "${series[@]}"; do
     echo "looking for $item"
-    find $item* -name "*.flac" | sort -V > playlists/$item.m3u
+    find $item-* -name "*.flac" | sort -V > playlists/$item.m3u
 done
