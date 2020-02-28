@@ -53,15 +53,15 @@ padding-left = 0
 padding-right = 2
 
 module-margin-left = 1
-module-margin-right = 2
+module-margin-right = 1
 
 font-0 = UbuntuMono-R:style=Regular:size=12;1
 font-1 = unifont:fontformat=truetype:size=10:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
-modules-left = i3 cpu temperature memory
+modules-left = i3 cpu temperature memory xbacklight pulseaudio
 modules-center = music
-modules-right = xbacklight pulseaudio xkeyboard wlan eth battery date
+modules-right = xkeyboard wlan eth battery date
 
 tray-position = right
 tray-padding = 5
@@ -159,12 +159,16 @@ label = %output%
 type = internal/xbacklight
 
 format = <label>
+format-underline = ${colors.yellow}
 label = BL %percentage%%
 
 [module/pulseaudio]
 type = internal/pulseaudio
 
 format-volume = <label-volume>
+format-volume-underline = ${colors.blue}
+format-muted-underline = ${colors.blue}
+
 label-volume = VOL %percentage%%
 label-volume-foreground = ${colors.white}
 
