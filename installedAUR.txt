@@ -1,7 +1,9 @@
-gotop
+exfalso
 inxi
+joplin
 libjson
 lightdm-webkit-theme-aether
+milton
 nerd-fonts-complete
 polybar
 pulseaudio-ctl
@@ -13,4 +15,5 @@ sourcetrail
 ttf-iosevka
 ttf-unifont
 ttf-vlgothic
+write_stylus
 yay

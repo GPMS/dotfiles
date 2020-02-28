@@ -1,3 +1,4 @@
+acpi
 alacritty
 audacious
 autoconf
@@ -78,6 +79,7 @@ linux
 linux-firmware
 linux-lts-headers
 logrotate
+lsof
 lvm2
 lxsession
 m4
@@ -86,7 +88,12 @@ man-db
 man-pages
 mdadm
 mesa-demos
+mpc
+mpd
+mpv
+msgpack-c
 nano
+ncmpcpp
 nemo
 nemo-fileroller
 neofetch
@@ -114,6 +121,7 @@ psmisc
 pulseaudio
 pulseaudio-alsa
 python-pip
+python-pynvim
 qbittorrent
 reflector
 reiserfsprogs
@@ -166,12 +174,12 @@ unzip
 usbutils
 util-linux
 vi
-vlc
 vulkan-intel
 wavpack
 which
 wqy-zenhei
 xarchiver
+xf86-input-wacom
 xf86-video-intel
 xfsprogs
 xorg-fonts-misc
@@ -185,6 +193,7 @@ xorg-xrandr
 xorg-xwininfo
 xsensors
 xterm
+youtube-dl
 zathura-pdf-mupdf
 zip
 zsh
