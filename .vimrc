@@ -16,6 +16,7 @@ call plug#begin('$HOME/.vim/plugged')
     Plug 'ctrlpvim/ctrlp.vim'
     Plug 'majutsushi/tagbar'
     Plug 'Yggdroot/indentLine'
+    Plug 'baskerville/vim-sxhkdrc'
 call plug#end()
 
 "Auto-Pairs

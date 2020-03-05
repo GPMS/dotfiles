@@ -1,5 +1,6 @@
 # vim:ft=bash
 
+sxhkd &
 feh --bg-scale $HOME/Wallpapers/1.jpg
 picom &
 nm-applet &

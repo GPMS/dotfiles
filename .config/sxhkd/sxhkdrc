@@ -1,0 +1,38 @@
+# vim:ft=sxhkdrc
+
+super + shift + b
+    $BROWSER
+super + shift + f
+    $FILE
+super + q
+    $HOME/Scripts/rofi_system_menu.sh
+
+## XF86 Keys ##
+
+Print
+    scrot
+
+# Volume
+XF86AudioRaiseVolume
+    pulseaudio-ctl up
+XF86AudioLowerVolume
+    pulseaudio-ctl down
+XF86AudioMute
+    pulseaudio-ctl mute
+
+# Brightness
+XF86MonBrightnessUp
+    xbacklight -inc 10
+XF86MonBrightnessDown
+    xbacklight -dec 10
+
+# Media
+XF86AudioPlay
+    mpc play
+XF86AudioPause
+    mpc pause
+XF86AudioNext
+    mpc next
+XF86AudioPrev
+    mpc prev
+
