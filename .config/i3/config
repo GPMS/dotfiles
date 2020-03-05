@@ -9,6 +9,9 @@ smart_gaps on
 smart_borders on
 set $mod Mod4
 
+exec $HOME/.config/polybar/launch.sh
+exec $TERMINAL --class "dropdown" &
+
 ## Miscelaneous Bindings ##
 
 # Dropdown terminal
