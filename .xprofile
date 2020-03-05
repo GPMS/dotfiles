@@ -1,0 +1,14 @@
+# vim:ft=bash
+
+feh --bg-scale $HOME/Wallpapers/1.jpg
+picom &
+nm-applet &
+$HOME/.config/polybar/launch.sh
+udiskie -2 &
+lxpolkit &
+dunst &
+fcitx -d &
+mpd &
+$HOME/Scripts/open_email_client.sh &
+$HOME/Scripts/battery_notifications.sh &
+$TERMINAL --class "dropdown" &
