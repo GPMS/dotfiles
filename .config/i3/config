@@ -78,7 +78,7 @@ bindsym $mod+Shift+o            exec $HOME/Scripts/i3resize.sh right
 #bindsym $mod+Shift+p
 
 #bindsym $mod+q
-bindsym $mod+Shift+q            kill
+bindsym $mod+Shift+q            [con_id="__focused__" instance="^(?!dropdown).*$"] kill
 
 #bindsym $mod+r
 #bindsym $mod+Shift+r
