@@ -7,7 +7,7 @@ gaps inner 5
 gaps outer 5
 smart_gaps on
 smart_borders on
-set $term --no-startup-id urxvt
+set $term --no-startup-id $TERMINAL
 set $mod Mod4
 
 ## Autostart ##
@@ -23,12 +23,19 @@ exec --no-startup-id fcitx -d
 exec --no-startup-id mpd
 exec --no-startup-id $HOME/Scripts/open_email_client.sh
 exec --no-startup-id $HOME/Scripts/battery_notifications.sh
+exec $TERMINAL --class "dropdown"
 
 ## Miscelaneous Bindings ##
 
-for_window [class="Alacritty" title="dropdown"] floating enable
-bindsym $mod+Return             exec alacritty
-bindsym $mod+Shift+Return       exec alacritty --title "dropdown"
+# Dropdown terminal
+for_window [instance="dropdown"] floating enable
+for_window [instance="dropdown"] sticky enable
+for_window [instance="dropdown"] resize set 800 480
+for_window [instance="dropdown"] move position center
+for_window [instance="dropdown"] move scratchpad
+
+bindsym $mod+Return             exec $TERMINAL
+bindsym $mod+Shift+Return       scratchpad show
 
 bindsym $mod+space              focus mode_toggle
 bindsym $mod+Shift+space        floating toggle
@@ -51,7 +58,7 @@ bindsym $mod+e                  layout toggle split
 #bindsym $mod+Shift+e
 
 bindsym $mod+f                  fullscreen toggle
-bindsym $mod+Shift+f            exec $FILEBROWSER
+bindsym $mod+Shift+f            exec $FILE
 
 #bindsym $mod+g
 #bindsym $mod+Shift+g
