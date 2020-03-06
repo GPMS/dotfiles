@@ -101,6 +101,14 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+" Window and tab navigation
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+nmap <M-h> :tabr<CR>
+nmap <M-l> :tabl<CR>
+
 " Enable Alt key
 let c='a'
 while c <= 'z'
