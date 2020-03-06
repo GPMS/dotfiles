@@ -10,6 +10,7 @@ call plug#begin('$HOME/.vim/plugged')
     Plug 'ajmwagar/vim-deus'
     Plug 'vim-airline/vim-airline'
     Plug 'preservim/nerdtree'
+    Plug 'jistr/vim-nerdtree-tabs'
     Plug 'ryanoasis/vim-devicons'
     Plug 'jiangmiao/auto-pairs'
     Plug 'ycm-core/YouCompleteMe'
@@ -29,7 +30,7 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
 "NERDTree
 let g:NERDTreeMapActivateNode = "l"
-nmap <F1> :NERDTreeToggle<CR>
+nmap <F1> :NERDTreeTabsToggle<CR>
 
 "Tagbar
 nmap <F2> :TagbarToggle<CR>
