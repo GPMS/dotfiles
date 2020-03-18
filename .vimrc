@@ -9,14 +9,20 @@ endif
 call plug#begin('$HOME/.vim/plugged')
     Plug 'ajmwagar/vim-deus'
     Plug 'vim-airline/vim-airline'
+    Plug 'jiangmiao/auto-pairs'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " File Browser
     Plug 'preservim/nerdtree'
     Plug 'jistr/vim-nerdtree-tabs'
     Plug 'ryanoasis/vim-devicons'
-    Plug 'jiangmiao/auto-pairs'
-    Plug 'ycm-core/YouCompleteMe'
-    Plug 'ctrlpvim/ctrlp.vim'
+    " Switching between files
+    Plug 'junegunn/fzf'
+    Plug 'junegunn/fzf.vim'
+
     Plug 'majutsushi/tagbar'
     Plug 'Yggdroot/indentLine'
+
+    " Syntax
     Plug 'baskerville/vim-sxhkdrc'
 call plug#end()
 
@@ -24,9 +30,17 @@ call plug#end()
 let g:AutoPairsFlyMode = 1
 let g:AutoPairsShortcutBackInsert = '<M-b>'
 
-"YouCompleteMe
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+"FZF
+nmap <C-f> :Files<CR>
+nmap <C-t> :Tags<CR>
+
+"CoC
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+autocmd FileType c nnoremap <M-s> :CocCommand clangd.switchSourceHeader<CR>
 
 "NERDTree
 let g:NERDTreeMapActivateNode = "l"
@@ -54,8 +68,6 @@ set encoding=UTF-8
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamedplus
 
-let mapleader=","
-
 " Enable relative line numbers
 set number
 
@@ -73,7 +85,7 @@ set gdefault
 " Highlight search results
 set hlsearch
 " Clear highlight
-map <Space> :noh<cr>
+map <space> :noh<CR>
 " Start searching without having to press Enter
 set incsearch
 " Ignore case of searches
