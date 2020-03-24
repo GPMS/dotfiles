@@ -1,7 +1,7 @@
 # vim:ft=bash
 
 sxhkd &
-feh --bg-scale $HOME/Wallpapers/wall.jpg
+feh --no-fehbg --bg-scale $HOME/Wallpapers/wall.jpg
 picom &
 nm-applet &
 udiskie -2 &
@@ -9,5 +9,4 @@ lxpolkit &
 dunst &
 fcitx -d &
 mpd &
-$HOME/Scripts/open_email_client.sh &
 $HOME/Scripts/battery_notifications.sh &
