@@ -9,6 +9,7 @@ smart_gaps on
 set $mod Mod4
 
 exec $HOME/.config/polybar/launch.sh
+exec $HOME/Scripts/open_email_client.sh
 exec $TERMINAL --class "dropdown" &
 
 ## Miscelaneous Bindings ##
