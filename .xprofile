@@ -3,10 +3,8 @@
 sxhkd &
 feh --no-fehbg --bg-scale $HOME/Wallpapers/wall.jpg
 picom &
-nm-applet &
 udiskie -2 &
 lxpolkit &
 dunst &
-fcitx -d &
 mpd &
 $HOME/Scripts/battery_notifications.sh &

@@ -9,6 +9,8 @@ smart_gaps on
 set $mod Mod4
 
 exec $HOME/.config/polybar/launch.sh
+exec nm-applet
+exec fcitx -d
 exec OpenEmailClient
 exec $TERMINAL --class "dropdown" &
 
