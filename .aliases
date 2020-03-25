@@ -5,6 +5,7 @@ alias clean='yay -Rsnu $(yay -Qqdt); yay -Sc'
 alias install='yay -Sy'
 alias remove='yay -Rsn'
 alias ping='ping -c 5 '
+alias vim='nvim'
 
 alias i3config='$EDITOR $HOME/.config/i3/config'
 alias polybarconfig='$EDITOR $HOME/.config/polybar/config'

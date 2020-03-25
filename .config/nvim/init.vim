@@ -1,14 +1,21 @@
 """"""""""""""" Plugins """""""""""""""
 " Install vim-plug automatically if not installed
-if empty(glob('$HOME/.vim/autoload/plug.vim'))
-    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    autocmd VimEnter * PlugInstall --sync | source $HOME/.vimrc
+if empty(glob('$HOME/.local/share/nvim/site/autoload/plug.vim'))
+    silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
+        \https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall -- sync | source $HOME/.config/nvim/init.vim
 endif
 
-call plug#begin('$HOME/.vim/plugged')
+call plug#begin()
+    " Appearance
     Plug 'ajmwagar/vim-deus'
     Plug 'vim-airline/vim-airline'
+    Plug 'majutsushi/tagbar'
+    Plug 'Yggdroot/indentLine'
+    " Syntax
+    Plug 'baskerville/vim-sxhkdrc'
+    Plug 'bfrg/vim-cpp-modern'
+    " Editing
     Plug 'jiangmiao/auto-pairs'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " File Browser
@@ -18,12 +25,6 @@ call plug#begin('$HOME/.vim/plugged')
     " Switching between files
     Plug 'junegunn/fzf'
     Plug 'junegunn/fzf.vim'
-
-    Plug 'majutsushi/tagbar'
-    Plug 'Yggdroot/indentLine'
-
-    " Syntax
-    Plug 'baskerville/vim-sxhkdrc'
 call plug#end()
 
 "Auto-Pairs
@@ -34,7 +35,7 @@ let g:AutoPairsShortcutBackInsert = '<M-b>'
 nmap <C-f> :Files<CR>
 nmap <C-t> :Tags<CR>
 
-"CoC
+" CoC
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
@@ -60,6 +61,8 @@ set shortmess=I
 syntax on
 set background=dark
 colorscheme deus
+
+set noshowmode
 
 filetype plugin indent on
 
@@ -121,15 +124,6 @@ nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 nmap <M-h> :tabr<CR>
 nmap <M-l> :tabl<CR>
-
-" Enable Alt key
-let c='a'
-while c <= 'z'
-  exec "set <A-".c.">=\e".c
-  exec "imap \e".c." <A-".c.">"
-  let c = nr2char(1+char2nr(c))
-endw
-set ttimeout ttimeoutlen=50
 
 " Strip trailing whitespaces on save
 if has("autocmd")
