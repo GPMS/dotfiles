@@ -1,6 +1,4 @@
 exfalso
-inxi
-joplin
 libjson
 lightdm-webkit-theme-aether
 milton
