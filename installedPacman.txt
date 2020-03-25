@@ -54,7 +54,6 @@ groff
 grub
 gst-plugins-good
 gvfs
-gvim
 gzip
 i3-gaps
 inetutils
