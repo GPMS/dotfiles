@@ -1,3 +1,5 @@
+export PATH=$PATH:$HOME/.local/bin
+
 # Japanese input
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx

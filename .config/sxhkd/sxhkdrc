@@ -5,7 +5,7 @@ super + shift + b
 super + shift + f
     $FILE
 super + q
-    $HOME/Scripts/rofi_system_menu.sh
+    RofiSystemMenu
 
 ## XF86 Keys ##
 
