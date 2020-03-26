@@ -1,5 +1,6 @@
 # vim: filetype=sh
-alias update='yay -Syu --devel'
+alias update='pacman -Syu'
+alias update-AUR='yay -Syu --devel'
 alias search='yay -Ss'
 alias clean='yay -Rsnu $(yay -Qqdt); yay -Sc'
 alias install='yay -Sy'
