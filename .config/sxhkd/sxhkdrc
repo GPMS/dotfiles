@@ -1,11 +1,15 @@
 # vim:ft=sxhkdrc
 
+super + Return
+    $TERMINAL
 super + shift + b
     $BROWSER
 super + shift + f
     $FILE
 super + q
     RofiSystemMenu
+super + d
+    rofi -show drun
 
 ## XF86 Keys ##
 
