@@ -6,6 +6,8 @@ super + shift + b
     $BROWSER
 super + shift + f
     $FILE
+super + shift + m
+    mpdControl
 super + q
     SystemMenu
 super + d

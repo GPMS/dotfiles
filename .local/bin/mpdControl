@@ -1,0 +1,24 @@
+#!/bin/bash
+
+load="Load"
+play="Play"
+stop="Stop"
+
+options="$load\n$play\n$stop"
+
+case `echo -e $options | dmenu -i -l 6` in
+    $load)
+        selected=`mpc lsplaylist | sort | dmenu -l 6`
+        if [ ! -z $selected ]; then
+            mpc -q clear
+            mpc load $selected >> /dev/null
+            mpc -q shuffle
+            mpc -q play
+        fi;;
+    $play)
+        selected=`mpc -f "%position% - %albumartist% - %title%" playlist | dmenu -i -l 6 | awk '{print $1;}'`
+        mpc play $selected >> /dev/null;;
+    $stop)
+        mpc -q stop && mpc -q clear;;
+esac
+
