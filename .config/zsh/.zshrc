@@ -79,11 +79,7 @@ source $HOME/.aliases
 
 bindkey -v
 
-
 PATH="/home/gabriel/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/gabriel/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/gabriel/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/gabriel/perl5\""; export PERL_MB_OPT;
-
-
-source /home/gabriel/.config/broot/launcher/bash/br
