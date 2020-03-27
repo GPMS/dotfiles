@@ -9,9 +9,10 @@ export GTK_IM_MODULE=fcitx
 export LANG=en_GB.UTF-8
 export EDITOR="nvim"
 export TERMINAL="alacritty"
-export BROWSER="chromium"
+export BROWSER="vivaldi-stable"
 export FILE="nemo"
 export READER="zathura"
+export LAUNCHER="dmenu_run"
 
 # XDG
 export XDG_CONFIG_HOME="$HOME/.config"

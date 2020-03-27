@@ -27,7 +27,7 @@ else
     content="$suspend\n$reboot\n$shutdown"
 fi
 
-selection=$(echo -e $content | rofi -dmenu -i -markup-rows -p "Action: ")
+selection=$(echo -e $content | dmenu -i -c -l 6 -bw 5)
 case $selection in
     $reload)
         case $WM in

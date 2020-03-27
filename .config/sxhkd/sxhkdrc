@@ -7,9 +7,9 @@ super + shift + b
 super + shift + f
     $FILE
 super + q
-    RofiSystemMenu
+    SystemMenu
 super + d
-    rofi -show drun
+    $LAUNCHER
 
 ## XF86 Keys ##
 
