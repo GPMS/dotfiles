@@ -1,42 +1,47 @@
 #!/bin/bash
 
 aliases="Aliases"
-Dir="$HOME/.aliases"
+aliasesFile="$HOME/.aliases"
 
 profile="Profile"
-profileDir="$HOME/.profile"
+profileFile="$HOME/.profile"
 
 xprofile="X Profile"
-xprofileDir="$HOME/.xprofile"
+xprofileFile="$HOME/.xprofile"
 
 scripts="Scripts"
-scriptsDir="$HOME/.local/bin"
+scriptsFile="$HOME/.local/bin/"
 
 neovim="NeoVim"
-neovimDir="$HOME/.config/nvim/init.vim"
+neovimFile="$HOME/.config/nvim/init.vim"
 
 i3="i3"
-i3Dir="$HOME/.config/i3/config"
+i3File="$HOME/.config/i3/config"
 
 zsh="Zsh"
-zshDir="$HOME/.config/zsh"
+zshFile="$HOME/.config/zsh"
 
 polybar="Polybar"
-polybarDir="$HOME/.config/polybar/config"
+polybarFile="$HOME/.config/polybar/config"
 
 dmenu="Dmenu"
-dmenuDir="$HOME/.config/dmenu/config.h"
+dmenuFile="$HOME/.config/dmenu/config.h"
+
+OpenFile()
+{
+    cd $2
+    $TERMINAL -e $EDITOR $1
+}
 
 configFiles="$aliases\n$profile\n$xprofile\n$scripts\n$neovim\n$i3\n$zsh\n$polybar\n$dmenu"
-
 case `echo -e $configFiles | dmenu -i` in
-    $aliases) $TERMINAL -e $EDITOR $aliasesDir ;;
-    $profile) $TERMINAL -e $EDITOR $profileDir ;;
-    $xprofile) $TERMINAL -e $EDITOR $xprofileDir ;;
-    $scripts) $TERMINAL -e $EDITOR $scriptsDir ;;
-    $neovim) $TERMINAL -e $EDITOR $neovimDir ;;
-    $i3) $TERMINAL -e $EDITOR $i3Dir ;;
-    $zsh) $TERMINAL -e $EDITOR $zshDir ;;
-    $polybar) $TERMINAL -e $EDITOR $polybarDir ;;
-    $dmenu) $TERMINAL -e $EDITOR $dmenuDir ;;
+    $aliases) OpenFile $aliasesFile $HOME ;;
+    $profile) OpenFile $profileFile $HOME ;;
+    $xprofile) OpenFile $xprofileFile $HOME ;;
+    $scripts) OpenFile $scriptsFile $HOME/.local/bin ;;
+    $neovim) OpenFile $neovimFile $HOME/.config/nvim ;;
+    $i3) OpenFile $i3File $HOME/.config/i3 ;;
+    $zsh) OpenFile $zshFile $HOME/.config/zsh ;;
+    $polybar) OpenFile $polybarFile $HOME/.config/polybar ;;
+    $dmenu) OpenFile $dmenuFile $HOME/.config/dmenu ;;
 esac
