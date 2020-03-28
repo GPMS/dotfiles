@@ -8,6 +8,8 @@ super + shift + f
     $FILE
 super + shift + m
     MpdControl
+super + shift + d
+    GoToDotFile
 super + q
     SystemMenu
 super + d
