@@ -61,6 +61,8 @@ set shortmess=I
 syntax on
 set background=dark
 colorscheme deus
+set termguicolors
+set t_Co=256
 
 set noshowmode
 
@@ -81,7 +83,7 @@ set nowrap
 
 " Ruler at column 80
 let &colorcolumn=join(range(81,999),",")
-highlight ColorColumn ctermbg=234 guibg=black
+highlight ColorColumn ctermbg=239 guibg=#242a32
 
 " Search
 
