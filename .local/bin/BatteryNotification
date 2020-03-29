@@ -2,14 +2,13 @@
 
 while :
 do
-    # Stop if there is no battery
-    if [ -z $(acpi -b) ]
-    then
-        break
-    fi
+    batteryDir="/sys/class/power_supply/BAT0"
 
-    batteryLevel=$(acpi -b |cut -d ' ' -f4| grep -o '[0-9]*')
-    isCharging=$(acpi -b | grep -c "Charging")
+    # Stop if there is no battery
+    test -d $batteryDir || echo "No Battery" && break
+
+    batteryLevel=$(cat "$batteryDir"/capacity)
+    isCharging=$(cat "$batteryDir"/status | grep -c "Charging")
 
     if [[ $isCharging -eq 1 && $batteryLevel -eq 100 ]]
     then
