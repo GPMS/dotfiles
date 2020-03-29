@@ -3,7 +3,7 @@
 sxhkd &
 feh --no-fehbg --bg-scale $HOME/Wallpapers/wall.jpg
 picom &
-udiskie -2 &
+udiskie &
 lxpolkit &
 dunst &
 mpd &
