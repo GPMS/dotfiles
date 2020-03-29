@@ -27,13 +27,16 @@ polybarFile="$HOME/.config/polybar/config"
 dmenu="Dmenu"
 dmenuFile="$HOME/.config/dmenu/config.h"
 
+alacritty="Alacritty"
+alacrittyFile="$HOME/.config/alacritty/alacritty.yml"
+
 OpenFile()
 {
     cd $2
     $TERMINAL -e $EDITOR $1
 }
 
-configFiles="$aliases\n$profile\n$xprofile\n$scripts\n$neovim\n$i3\n$zsh\n$polybar\n$dmenu"
+configFiles="$aliases\n$profile\n$xprofile\n$scripts\n$neovim\n$i3\n$zsh\n$polybar\n$dmenu\n$alacritty"
 case `echo -e $configFiles | dmenu -i` in
     $aliases) OpenFile $aliasesFile $HOME ;;
     $profile) OpenFile $profileFile $HOME ;;
@@ -44,4 +47,5 @@ case `echo -e $configFiles | dmenu -i` in
     $zsh) OpenFile $zshFile $HOME/.config/zsh ;;
     $polybar) OpenFile $polybarFile $HOME/.config/polybar ;;
     $dmenu) OpenFile $dmenuFile $HOME/.config/dmenu ;;
+    $alacritty) OpenFile $alacrittyFile $HOME/.config/alacritty ;;
 esac
