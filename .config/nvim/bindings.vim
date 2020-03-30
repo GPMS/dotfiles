@@ -7,6 +7,11 @@ nmap <M-l> :tabnext<CR>
 nmap <M-o> :tabnew<CR>
 nmap <M-d> :tabclose<CR>
 
+noremap <C-M-t> :split term://zsh<CR>:resize 10<CR>i
+tmap <ESC> <C-\><C-n>:q!<CR>
+tmap <C-j> <C-\><C-n><C-w>j
+tmap <C-k> <C-\><C-n><C-w>k
+
 map <space> :noh<CR>
 
 "FZF
