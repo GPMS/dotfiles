@@ -5,15 +5,6 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export GTK_IM_MODULE=fcitx
 
-# Default programs
-export LANG=en_GB.UTF-8
-export EDITOR="nvim"
-export TERMINAL="alacritty"
-export BROWSER="vivaldi-stable"
-export FILE="nemo"
-export READER="zathura"
-export LAUNCHER="dmenu_run"
-
 # XDG
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
