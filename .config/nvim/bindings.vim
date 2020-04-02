@@ -18,19 +18,13 @@ map <space> :noh<CR>
 nmap <C-f> :Files<CR>
 nmap <C-t> :Tags<CR>
 
-"CoC
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-nmap <silent> <TAB> <Plug>(coc-range-select)
-xmap <silent> <TAB> <Plug>(coc-range-select)
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-nmap rn <Plug>(coc-rename)
+"Linting
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+nmap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nmap <silent> gD <C-w>v:call LanguageClient#textDocument_definition()<CR>
+nmap <silent> gi :call LanguageClient#textDocument_implementation()<CR>
+nmap <silent> gr :call LanguageClient#textDocument_references()<CR>
+nmap <silent> rn :call LanguageClient#textDocument_rename()<CR>
 
 nmap <F1> :NERDTreeTabsToggle<CR>
 nmap <F2> :TagbarToggle<CR>

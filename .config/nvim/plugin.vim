@@ -16,7 +16,12 @@ call plug#begin()
     Plug 'bfrg/vim-cpp-modern'
     " Editing
     Plug 'jiangmiao/auto-pairs'
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    Plug 'Shougo/echodoc.vim'
+    Plug 'autozimu/LanguageClient-neovim', {
+        \ 'branch': 'next',
+        \ 'do': 'bash install.sh',
+        \ }
     " File Browser
     Plug 'preservim/nerdtree'
     Plug 'jistr/vim-nerdtree-tabs'
@@ -32,3 +37,21 @@ let g:AutoPairsShortcutBackInsert = '<M-b>'
 
 "NERDTree
 let g:NERDTreeMapActivateNode = "l"
+
+"Auto Completion
+let g:LanguageClient_serverCommands = {
+    \ 'c'  : ['/bin/clangd'],
+    \ 'cpp': ['/bin/clangd'],
+    \ }
+
+let g:LanguageClient_hoverPreview = "Never"
+let g:LanguageClient_useVirtualText = "No"
+
+call deoplete#custom#source('LanguageClient',
+            \ 'min_pattern_length',
+            \ 2)
+
+let g:echodoc#enable_at_startup = 1
+let g:echodoc#type = 'floating'
+
+let g:deoplete#enable_at_startup = 1
