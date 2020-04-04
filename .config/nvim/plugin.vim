@@ -14,6 +14,7 @@ call plug#begin()
     " Syntax
     Plug 'baskerville/vim-sxhkdrc'
     Plug 'bfrg/vim-cpp-modern'
+    Plug 'mboughaba/i3config.vim'
     " Editing
     Plug 'jiangmiao/auto-pairs'
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
