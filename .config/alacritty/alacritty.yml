@@ -1,6 +1,7 @@
 # vim: ts=2 sw=2
 env:
-  TERM: xterm-256color
+  #TERM: xterm-256color
+  TERM: alacritty
 
 window:
   #dimensions:

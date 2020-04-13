@@ -12,7 +12,7 @@ exec $HOME/.config/polybar/launch.sh
 exec nm-applet
 exec fcitx -d
 exec OpenEmailClient
-exec $TERMINAL --class "dropdown"
+exec $TERM --class "dropdown"
 
 ## Miscelaneous Bindings ##
 

@@ -1,7 +1,7 @@
 # vim:ft=sxhkdrc
 
 super + Return
-    $TERMINAL
+    $TERM
 super + shift + b
     $BROWSER
 super + shift + f
