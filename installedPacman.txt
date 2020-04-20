@@ -7,8 +7,9 @@ base
 bash
 binutils
 bison
+breeze-gtk
 bzip2
-chromium
+ccls
 clang
 cmake
 cmus
@@ -32,7 +33,6 @@ feh
 file
 filesystem
 findutils
-firefox
 flashplugin
 flex
 fzf
@@ -52,8 +52,12 @@ gparted
 grep
 groff
 grub
+gst-libav
 gst-plugins-good
+gstreamer-vaapi
+gtk-chtheme
 gvfs
+gvfs-mtp
 gzip
 i3-gaps
 inetutils
@@ -63,6 +67,7 @@ iproute2
 iputils
 jfsutils
 jsoncpp
+lastpass-cli
 less
 lib32-mesa
 lib32-nvidia-utils
@@ -100,6 +105,7 @@ netctl
 network-manager-applet
 networkmanager
 nmap
+nnn
 nomacs
 noto-fonts
 noto-fonts-cjk
@@ -122,10 +128,10 @@ pulseaudio-alsa
 python-pip
 python-pynvim
 qbittorrent
+qutebrowser
 reflector
 reiserfsprogs
 rofi
-rxvt-unicode
 s-nail
 scrot
 sdl2_image
@@ -177,6 +183,7 @@ util-linux
 vi
 vulkan-intel
 wavpack
+wget
 which
 wqy-zenhei
 xarchiver
@@ -188,13 +195,13 @@ xorg-fonts-misc
 xorg-server
 xorg-xbacklight
 xorg-xconsole
+xorg-xev
 xorg-xfontsel
 xorg-xinit
 xorg-xkill
 xorg-xrandr
 xorg-xwininfo
 xsensors
-xterm
 youtube-dl
 zathura-pdf-mupdf
 zip
