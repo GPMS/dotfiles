@@ -1,28 +1,30 @@
 # vim:ft=i3config
 
 ## Basic Definitions ##
-
-for_window [class="^.*"] border pixel 3
 gaps inner 5
 gaps outer 5
 smart_gaps on
 set $mod Mod4
 
+## AutoStart ##
 exec $HOME/.config/polybar/launch.sh
 exec nm-applet
 exec fcitx -d
 exec OpenEmailClient
 exec $TERM --class "dropdown"
 
-## Miscelaneous Bindings ##
+## Window Customization ##
+for_window [class="^.*"] border pixel 3
 
-# Dropdown terminal
 for_window [instance="dropdown"] floating enable
 for_window [instance="dropdown"] resize set 800 480
 for_window [instance="dropdown"] move position center
 for_window [instance="dropdown"] sticky enable
 for_window [instance="dropdown"] move scratchpad
 
+## Miscelaneous Bindings ##
+
+# Dropdown terminal
 bindsym $mod+Shift+Return       scratchpad show
 
 bindsym $mod+space              focus mode_toggle
