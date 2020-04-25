@@ -33,7 +33,7 @@ alacrittyFile="$HOME/.config/alacritty/alacritty.yml"
 OpenFile()
 {
     cd $2
-    $TERMINAL -e $EDITOR $1
+    $TERM -e $EDITOR $1
 }
 
 configFiles="$aliases\n$profile\n$xprofile\n$scripts\n$neovim\n$i3\n$zsh\n$polybar\n$dmenu\n$alacritty"
