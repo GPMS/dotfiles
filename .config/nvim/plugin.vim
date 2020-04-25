@@ -53,6 +53,5 @@ call deoplete#custom#source('LanguageClient',
             \ 2)
 
 let g:echodoc#enable_at_startup = 1
-let g:echodoc#type = 'floating'
 
 let g:deoplete#enable_at_startup = 1

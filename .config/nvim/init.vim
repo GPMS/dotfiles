@@ -18,6 +18,7 @@ set smarttab
 set smartindent
 set ignorecase
 set completeopt-=preview
+set cmdheight=3
 
 set showmatch
 
