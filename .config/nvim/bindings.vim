@@ -9,12 +9,14 @@ nmap    <C-h>       <C-w>h
 nmap    <C-j>       <C-w>j
 nmap    <C-k>       <C-w>k
 nmap    <C-l>       <C-w>l
+
 " Tabs
 nmap    <M-h>       :tabprevious<CR>
 nmap    <M-l>       :tabnext<CR>
 nmap    <M-o>       :tabnew<CR>
 nmap    <M-d>       :tabclose<CR>
 
+" Split term
 noremap <C-M-t>     :split term://zsh<CR>:resize 10<CR>i
 tmap    <ESC>       <C-\><C-n>:q!<CR>
 tmap    <C-j>       <C-\><C-n><C-w>j
@@ -28,7 +30,7 @@ xnoremap J          :move '>+1<CR>gv-gv
 
 "FZF
 nmap    <C-f>       :Files<CR>
-nmap    <C-t>       :Tags<CR>
+nmap    <C-t>       :! ctags --exclude=".vscode" -R .<CR>:Tags<CR>
 
 "Linting
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
