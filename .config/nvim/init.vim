@@ -6,7 +6,7 @@ set noshowmode
 
 syntax on
 set termguicolors
-colorscheme deus
+colorscheme onedark
 set background=dark
 
 filetype plugin indent on

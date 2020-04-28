@@ -8,6 +8,7 @@ endif
 call plug#begin()
     " Appearance
     Plug 'ajmwagar/vim-deus'
+    Plug 'joshdick/onedark.vim'
     Plug 'vim-airline/vim-airline'
     Plug 'majutsushi/tagbar'
     Plug 'Yggdroot/indentLine'
@@ -38,6 +39,11 @@ let g:AutoPairsShortcutBackInsert = '<M-b>'
 
 "NERDTree
 let g:NERDTreeMapActivateNode = "l"
+
+" Identline
+let g:indentLine_color_term = 255
+let g:indentLine_color_gui = '#5C6370'
+
 
 "Auto Completion
 let g:LanguageClient_serverCommands = {
