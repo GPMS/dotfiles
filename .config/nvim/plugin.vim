@@ -18,6 +18,7 @@ call plug#begin()
     Plug 'mboughaba/i3config.vim'
     " Editing
     Plug 'jiangmiao/auto-pairs'
+    Plug 'ervandew/supertab'
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'Shougo/echodoc.vim'
     Plug 'autozimu/LanguageClient-neovim', {
@@ -46,6 +47,8 @@ let g:indentLine_color_gui = '#5C6370'
 
 
 "Auto Completion
+let g:SuperTabDefaultCompletionType = "<c-n>"
+
 let g:LanguageClient_serverCommands = {
     \ 'c'  : ['/bin/clangd'],
     \ 'cpp': ['/bin/clangd'],

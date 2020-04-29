@@ -33,7 +33,6 @@ nmap    <C-f>       :Files<CR>
 nmap    <C-t>       :! ctags --exclude=".vscode" -R .<CR>:Tags<CR>
 
 "Linting
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 nmap <silent> gd    :call LanguageClient#textDocument_definition()<CR>
 nmap <silent> gD    <C-w>v:call LanguageClient#textDocument_definition()<CR>
 nmap <silent> gi    :call LanguageClient#textDocument_implementation()<CR>
