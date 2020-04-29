@@ -5,16 +5,18 @@ map     <Left>      :vertical resize +2<CR>
 map     <Right>     :vertical resize -2<CR>
 
 " Window movement
-nmap    <C-h>       <C-w>h
-nmap    <C-j>       <C-w>j
-nmap    <C-k>       <C-w>k
-nmap    <C-l>       <C-w>l
+nmap    <C-h>       :wincmd h<CR>
+nmap    <C-j>       :wincmd j<CR>
+nmap    <C-k>       :wincmd k<CR>
+nmap    <C-l>       :wincmd l<CR>
 
 " Tabs
+nmap    <M-H>       :tabfirst<CR>
+nmap    <M-L>       :tablast<CR>
 nmap    <M-h>       :tabprevious<CR>
 nmap    <M-l>       :tabnext<CR>
 nmap    <M-o>       :tabnew<CR>
-nmap    <M-d>       :tabclose<CR>
+nmap    <M-q>       :tabclose<CR>
 
 " Split term
 noremap <C-M-t>     :split term://zsh<CR>:resize 10<CR>i
