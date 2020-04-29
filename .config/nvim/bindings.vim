@@ -42,3 +42,5 @@ nmap <silent> rn    :call LanguageClient#textDocument_rename()<CR>
 
 nmap    <F1>        :NERDTreeTabsToggle<CR>
 nmap    <F2>        :TagbarToggle<CR>
+nmap    <F3>        :make!<CR>
+nmap    <F4>        :!./game<CR>
