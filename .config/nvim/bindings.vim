@@ -5,6 +5,8 @@ map     <Left>      :vertical resize +2<CR>
 map     <Right>     :vertical resize -2<CR>
 
 " Window movement
+nmap    <C-v>       :vsplit<Space>
+nmap    <C-s>       :split<Space>
 nmap    <C-h>       :wincmd h<CR>
 nmap    <C-j>       :wincmd j<CR>
 nmap    <C-k>       :wincmd k<CR>
@@ -15,7 +17,7 @@ nmap    <M-H>       :tabfirst<CR>
 nmap    <M-L>       :tablast<CR>
 nmap    <M-h>       :tabprevious<CR>
 nmap    <M-l>       :tabnext<CR>
-nmap    <M-o>       :tabnew<CR>
+nmap    <M-o>       :tabnew<Space>
 nmap    <M-q>       :tabclose<CR>
 
 " Split term
@@ -43,5 +45,5 @@ nmap <silent> rn    :call LanguageClient#textDocument_rename()<CR>
 
 nmap    <F1>        :NERDTreeTabsToggle<CR>
 nmap    <F2>        :TagbarToggle<CR>
-nmap    <F3>        :make!<CR>
+nmap    <F3>        :!make<CR>
 nmap    <F4>        :!./game<CR>

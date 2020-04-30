@@ -17,8 +17,9 @@ call plug#begin()
     Plug 'bfrg/vim-cpp-modern'
     Plug 'mboughaba/i3config.vim'
     " Editing
-    Plug 'jiangmiao/auto-pairs'
     Plug 'ervandew/supertab'
+    Plug 'tpope/vim-surround'
+    Plug 'jiangmiao/auto-pairs'
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'Shougo/echodoc.vim'
     Plug 'autozimu/LanguageClient-neovim', {
@@ -33,10 +34,6 @@ call plug#begin()
     Plug 'junegunn/fzf'
     Plug 'junegunn/fzf.vim'
 call plug#end()
-
-"Auto-Pairs
-let g:AutoPairsFlyMode = 1
-let g:AutoPairsShortcutBackInsert = '<M-b>'
 
 "NERDTree
 let g:NERDTreeMapActivateNode = "l"
