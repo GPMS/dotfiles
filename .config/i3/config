@@ -17,7 +17,7 @@ exec $TERM --class "dropdown"
 for_window [class="^.*"] border pixel 3
 
 for_window [instance="dropdown"] floating enable
-for_window [instance="dropdown"] resize set 800 480
+for_window [instance="dropdown"] resize set 1080 720
 for_window [instance="dropdown"] move position center
 for_window [instance="dropdown"] sticky enable
 for_window [instance="dropdown"] move scratchpad
