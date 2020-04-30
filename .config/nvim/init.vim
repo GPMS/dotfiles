@@ -19,8 +19,8 @@ set smartindent
 set ignorecase
 set completeopt-=preview
 set cmdheight=3
-
 set showmatch
+set clipboard=unnamedplus
 
 set number
 set relativenumber
