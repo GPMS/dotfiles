@@ -38,6 +38,8 @@ case $selection in
         case $WM in
             i3)
                 i3-msg restart;;
+                killall picom
+                picom &; disown
         esac;;
     $quit)
         case $WM in
