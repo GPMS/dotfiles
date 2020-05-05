@@ -8,8 +8,6 @@ set $mod Mod4
 
 ## AutoStart ##
 exec $HOME/.config/polybar/launch.sh
-exec nm-applet
-exec fcitx -d
 exec OpenEmailClient
 exec $TERM --class "dropdown"
 
