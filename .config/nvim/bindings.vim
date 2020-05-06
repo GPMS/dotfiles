@@ -20,12 +20,6 @@ nmap    <M-l>       :tabnext<CR>
 nmap    <M-o>       :tabnew<Space>
 nmap    <M-q>       :tabclose<CR>
 
-" Split term
-noremap <C-M-t>     :split term://zsh<CR>:resize 10<CR>i
-tmap    <ESC>       <C-\><C-n>:q!<CR>
-tmap    <C-j>       <C-\><C-n><C-w>j
-tmap    <C-k>       <C-\><C-n><C-w>k
-
 map     <Space>     :noh<CR>
 
 " Move lines up and down in visual mode
@@ -45,5 +39,15 @@ nmap <silent> rn    :call LanguageClient#textDocument_rename()<CR>
 
 nmap    <F1>        :NERDTreeTabsToggle<CR>
 nmap    <F2>        :TagbarToggle<CR>
-nmap    <F3>        :!make<CR>
-nmap    <F4>        :!./game<CR>
+" Float Term
+nmap                    <F3>    :FloatermNew make<CR>
+nmap                    <F4>    :FloatermNew ./game<CR>
+
+nnoremap    <silent>    <F9>    :FloatermNew<CR>
+tnoremap    <silent>    <F9>    <C-\><C-n>:FloatermNew<CR>
+nnoremap    <silent>    <F10>    :FloatermPrev<CR>
+tnoremap    <silent>    <F10>    <C-\><C-n>:FloatermPrev<CR>
+nnoremap    <silent>    <F11>    :FloatermNext<CR>
+tnoremap    <silent>    <F11>    <C-\><C-n>:FloatermNext<CR>
+nnoremap    <silent>    <F12>   :FloatermToggle<CR>
+tnoremap    <silent>    <F12>   <C-\><C-n>:FloatermToggle<CR>

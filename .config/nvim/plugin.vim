@@ -26,6 +26,7 @@ call plug#begin()
         \ 'branch': 'next',
         \ 'do': 'bash install.sh',
         \ }
+    Plug 'voldikss/vim-floaterm'
     " File Browser
     Plug 'preservim/nerdtree'
     Plug 'jistr/vim-nerdtree-tabs'
@@ -41,7 +42,6 @@ let g:NERDTreeMapActivateNode = "l"
 " Identline
 let g:indentLine_color_term = 255
 let g:indentLine_color_gui = '#5C6370'
-
 
 "Auto Completion
 let g:SuperTabDefaultCompletionType = "<c-n>"
