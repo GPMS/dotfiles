@@ -27,6 +27,7 @@ call plug#begin()
         \ 'do': 'bash install.sh',
         \ }
     Plug 'voldikss/vim-floaterm'
+    Plug 'justinmk/vim-sneak'
     " File Browser
     Plug 'preservim/nerdtree'
     Plug 'jistr/vim-nerdtree-tabs'
@@ -42,6 +43,10 @@ let g:NERDTreeMapActivateNode = "l"
 " Identline
 let g:indentLine_color_term = 255
 let g:indentLine_color_gui = '#5C6370'
+
+" Sneak
+let g:sneak#label = 1
+let g:sneak#use_ic_scs = 1
 
 "Auto Completion
 let g:SuperTabDefaultCompletionType = "<c-n>"
