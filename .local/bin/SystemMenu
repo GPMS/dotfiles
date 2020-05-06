@@ -27,6 +27,14 @@ else
     content="$suspend\n$reboot\n$shutdown"
 fi
 
+Restart()
+{
+    i3-msg restart
+    killall picom
+    picom &
+    disown
+}
+
 selection=$(echo -e $content | dmenu -i -c -l 6 -bw 5)
 case $selection in
     $reload)
@@ -37,9 +45,7 @@ case $selection in
     $restart)
         case $WM in
             i3)
-                i3-msg restart;;
-                killall picom
-                picom &; disown
+                Restart;;
         esac;;
     $quit)
         case $WM in
