@@ -10,7 +10,7 @@ super + shift + m
     MpdControl
 super + shift + d
     GoToDotFile
-super + q
+super + shift + q
     SystemMenu
 super + d
     $LAUNCHER

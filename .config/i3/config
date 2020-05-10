@@ -32,7 +32,7 @@ floating_modifier $mod
 ## Letter key bindings ##
 bindsym $mod+f                  fullscreen toggle
 
-bindsym $mod+Shift+q            [con_id="__focused__" instance="^(?!dropdown).*$"] kill
+bindsym $mod+q                  [con_id="__focused__" instance="^(?!dropdown).*$"] kill
 
 bindsym $mod+e                  layout toggle split
 bindsym $mod+s                  layout stacking
