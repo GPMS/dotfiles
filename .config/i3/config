@@ -9,7 +9,7 @@ set $mod Mod4
 ## AutoStart ##
 exec $HOME/.config/polybar/launch.sh
 exec OpenEmailClient
-exec $TERM --class "dropdown"
+exec $TERMINAL -n "dropdown"
 
 ## Window Customization ##
 for_window [class="^.*"] border pixel 3
