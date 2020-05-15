@@ -1,5 +1,6 @@
 # vim:ft=bash
 
+xset r rate 200 40
 sxhkd &
 feh --no-fehbg --bg-scale $HOME/Wallpapers/wall.jpg
 picom &
