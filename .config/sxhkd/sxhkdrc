@@ -37,8 +37,8 @@ XF86MonBrightnessDown
 # Media
 XF86AudioPlay
     mpc toggle
-XF86AudioPause
-    mpc pause
+XF86AudioStop
+    mpc stop
 XF86AudioNext
     mpc next
 XF86AudioPrev
