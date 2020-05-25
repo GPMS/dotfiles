@@ -1,5 +1,4 @@
 acpi
-alacritty
 audacious
 autoconf
 automake
@@ -9,8 +8,8 @@ binutils
 bison
 breeze-gtk
 bzip2
-ccls
 clang
+cloc
 cmake
 cmus
 code
@@ -23,6 +22,7 @@ diffutils
 dunst
 e2fsprogs
 efibootmgr
+evince
 faac
 fakeroot
 fcitx
@@ -97,8 +97,6 @@ mpv
 msgpack-c
 nano
 ncmpcpp
-nemo
-nemo-fileroller
 neofetch
 neovim
 netctl
@@ -119,7 +117,6 @@ patch
 pciutils
 perl
 picom
-pinta
 pkgconf
 procps-ng
 psmisc
@@ -170,7 +167,7 @@ thunar
 thunderbird
 tldr
 traceroute
-transset-df
+tree
 ttf-jetbrains-mono
 ttf-liberation
 ttf-ubuntu-font-family
@@ -190,6 +187,7 @@ xarchiver
 xclip
 xf86-input-wacom
 xf86-video-intel
+xfce4-settings
 xfsprogs
 xorg-fonts-misc
 xorg-server
