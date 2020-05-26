@@ -3,9 +3,10 @@
 while :
 do
     # Only open when the PC has an internet connection
-    if ping -q -c 1 -W 1 www.google.com
-    then
-        i3-msg 'workspace 9; exec thunderbird; workspace 1'
+    if ping -q -c 1 -W 1 www.google.com; then
+        thunderbird &
+        qbittorrent &
+        brave &
         break
     fi
 
