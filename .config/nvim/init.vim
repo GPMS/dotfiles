@@ -3,6 +3,7 @@ source $HOME/.config/nvim/bindings.vim
 
 set shortmess=I
 set noshowmode
+set hidden
 
 syntax on
 set termguicolors
