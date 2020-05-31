@@ -5,8 +5,6 @@ map     <Left>      :vertical resize +2<CR>
 map     <Right>     :vertical resize -2<CR>
 
 " Window movement
-nmap    <C-v>       :vsplit<Space>
-nmap    <C-s>       :split<Space>
 nmap    <C-h>       :wincmd h<CR>
 nmap    <C-j>       :wincmd j<CR>
 nmap    <C-k>       :wincmd k<CR>
@@ -28,7 +26,7 @@ xnoremap J          :move '>+1<CR>gv-gv
 
 "FZF
 nmap    <C-f>       :Files<CR>
-nmap    <C-t>       :! ctags --exclude=".vscode" -R .<CR>:Tags<CR>
+nmap    <C-t>       :! ctags --exclude={.vscode,compile_commands.json} -R .<CR>:Tags<CR>
 
 "Linting
 nmap <silent> gd    :call LanguageClient#textDocument_definition()<CR>
