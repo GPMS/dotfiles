@@ -34,6 +34,8 @@ nmap <silent> gD    <Plug>(coc-type-definition)
 nmap <silent> gi    <Plug>(coc-implementation)
 nmap <silent> gr    <Plug>(coc-references)
 nmap <silent> rn    <Plug>(coc-rename)
+nmap <silent> gh    :CocCommand clangd.switchSourceHeader<CR>
+nmap <silent> gH    :vsplit<CR>:CocCommand clangd.switchSourceHeader<CR>
 
 nmap    <F1>        :NERDTreeTabsToggle<CR>
 nmap    <F2>        :TagbarToggle<CR>

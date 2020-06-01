@@ -1,9 +1,11 @@
 source $HOME/.config/nvim/plugin.vim
 source $HOME/.config/nvim/bindings.vim
 
-set shortmess=I
+set shortmess+=c
 set noshowmode
 set hidden
+set updatetime=300
+set signcolumn=yes
 
 syntax on
 set termguicolors

@@ -41,3 +41,29 @@ let g:indentLine_color_gui = '#5C6370'
 " Sneak
 let g:sneak#label = 1
 let g:sneak#use_ic_scs = 1
+
+" CoC
+let g:coc_global_extensions = [
+            \   'coc-json',
+            \   'coc-clangd'
+            \ ]
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Add `:Format` command to format current buffer.
+command! -nargs=0 Format :call CocAction('format')
+
+" Add `:Fold` command to fold current buffer.
+command! -nargs=? Fold :call     CocAction('fold', <f-args>)
