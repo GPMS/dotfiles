@@ -29,11 +29,11 @@ nmap    <C-f>       :Files<CR>
 nmap    <C-t>       :! ctags --exclude={.vscode,compile_commands.json} -R .<CR>:Tags<CR>
 
 "Linting
-nmap <silent> gd    :call LanguageClient#textDocument_definition()<CR>
-nmap <silent> gD    <C-w>v:call LanguageClient#textDocument_definition()<CR>
-nmap <silent> gi    :call LanguageClient#textDocument_implementation()<CR>
-nmap <silent> gr    :call LanguageClient#textDocument_references()<CR>
-nmap <silent> rn    :call LanguageClient#textDocument_rename()<CR>
+nmap <silent> gd    <Plug>(coc-definition)
+nmap <silent> gD    <Plug>(coc-type-definition)
+nmap <silent> gi    <Plug>(coc-implementation)
+nmap <silent> gr    <Plug>(coc-references)
+nmap <silent> rn    <Plug>(coc-rename)
 
 nmap    <F1>        :NERDTreeTabsToggle<CR>
 nmap    <F2>        :TagbarToggle<CR>

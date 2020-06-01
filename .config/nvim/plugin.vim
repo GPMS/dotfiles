@@ -17,15 +17,9 @@ call plug#begin()
     Plug 'bfrg/vim-cpp-modern'
     Plug 'mboughaba/i3config.vim'
     " Editing
-    Plug 'ervandew/supertab'
+    Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
     Plug 'tpope/vim-surround'
     Plug 'jiangmiao/auto-pairs'
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-    Plug 'Shougo/echodoc.vim'
-    Plug 'autozimu/LanguageClient-neovim', {
-        \ 'branch': 'next',
-        \ 'do': 'bash install.sh',
-        \ }
     Plug 'voldikss/vim-floaterm'
     Plug 'justinmk/vim-sneak'
     " File Browser
@@ -47,22 +41,3 @@ let g:indentLine_color_gui = '#5C6370'
 " Sneak
 let g:sneak#label = 1
 let g:sneak#use_ic_scs = 1
-
-"Auto Completion
-let g:SuperTabDefaultCompletionType = "<c-n>"
-
-let g:LanguageClient_serverCommands = {
-    \ 'c'  : ['/bin/clangd'],
-    \ 'cpp': ['/bin/clangd'],
-    \ }
-
-let g:LanguageClient_hoverPreview = "Never"
-let g:LanguageClient_useVirtualText = "No"
-
-call deoplete#custom#source('LanguageClient',
-            \ 'min_pattern_length',
-            \ 2)
-
-let g:echodoc#enable_at_startup = 1
-
-let g:deoplete#enable_at_startup = 1
