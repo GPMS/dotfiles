@@ -4,14 +4,15 @@ autoconf
 automake
 base
 bash
+bashtop
 binutils
 bison
 breeze-gtk
 bzip2
+ccls
 clang
 cloc
 cmake
-cmus
 code
 coreutils
 cryptsetup
@@ -19,6 +20,7 @@ ctags
 device-mapper
 dhcpcd
 diffutils
+discord
 dunst
 e2fsprogs
 efibootmgr
@@ -29,6 +31,7 @@ fcitx
 fcitx-configtool
 fcitx-mozc
 fcitx-qt5
+fd
 feh
 file
 filesystem
@@ -45,6 +48,7 @@ gettext
 gimp
 git
 glibc
+glm
 gnome-system-monitor
 gnome-terminal
 gnu-free-fonts
@@ -66,6 +70,7 @@ intel-ucode
 iproute2
 iputils
 jfsutils
+jq
 jsoncpp
 lastpass-cli
 less
@@ -80,6 +85,7 @@ lightdm
 lightdm-webkit2-greeter
 linux
 linux-firmware
+linux-headers
 logrotate
 lsof
 lvm2
@@ -168,16 +174,19 @@ thunderbird
 tldr
 traceroute
 tree
+ttf-inconsolata
 ttf-jetbrains-mono
 ttf-liberation
 ttf-ubuntu-font-family
 tumbler
 udiskie
+unclutter
 unrar
 unzip
 usbutils
 util-linux
 vi
+virtualbox
 vulkan-intel
 wavpack
 wget
@@ -200,6 +209,7 @@ xorg-xkill
 xorg-xrandr
 xorg-xwininfo
 xsensors
+yarn
 youtube-dl
 zathura-pdf-mupdf
 zip

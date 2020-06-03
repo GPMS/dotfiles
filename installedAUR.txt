@@ -1,3 +1,4 @@
+bear
 brave-bin
 exfalso
 libjson
@@ -11,9 +12,12 @@ pulseaudio-ctl
 python-ueberzug
 ranger-git
 siji-git
+simple-mtpfs
 transset-df
 ttf-iosevka
+ttf-symbola
 ttf-unifont
 ttf-vlgothic
+warsaw-bin
 write_stylus
 yay
