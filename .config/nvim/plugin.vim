@@ -12,20 +12,14 @@ call plug#begin()
     Plug 'vim-airline/vim-airline'
     Plug 'majutsushi/tagbar'
     Plug 'Yggdroot/indentLine'
-    " Syntax
-    Plug 'baskerville/vim-sxhkdrc'
-    Plug 'bfrg/vim-cpp-modern'
-    Plug 'mboughaba/i3config.vim'
-    " Editing
+    " Linting
     Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+    Plug 'sheerun/vim-polyglot'
+    " Editing
     Plug 'tpope/vim-surround'
     Plug 'jiangmiao/auto-pairs'
     Plug 'voldikss/vim-floaterm'
     Plug 'justinmk/vim-sneak'
-    " File Browser
-    Plug 'preservim/nerdtree'
-    Plug 'jistr/vim-nerdtree-tabs'
-    Plug 'ryanoasis/vim-devicons'
     " Switching between files
     Plug 'junegunn/fzf'
     Plug 'junegunn/fzf.vim'

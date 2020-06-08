@@ -37,7 +37,7 @@ nmap <silent> rn    <Plug>(coc-rename)
 nmap <silent> gh    :CocCommand clangd.switchSourceHeader<CR>
 nmap <silent> gH    :vsplit<CR>:CocCommand clangd.switchSourceHeader<CR>
 
-nmap    <F1>        :NERDTreeTabsToggle<CR>
+nmap    <F1>        :CocCommand explorer<CR>
 nmap    <F2>        :TagbarToggle<CR>
 " Float Term
 nmap                    <F3>    :FloatermNew make<CR>
