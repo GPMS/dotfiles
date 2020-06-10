@@ -40,4 +40,5 @@
     "workbench.colorTheme": "One Dark Pro",
     "timeline.excludeSources": [],
     "workbench.tree.indent": 30,
+    "explorer.confirmDelete": false,
 }
