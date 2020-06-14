@@ -1,0 +1,60 @@
+snippet main b
+int main(int argc, char* argv[])
+{
+	${1:Code...}
+
+	return 0;
+}
+endsnippet
+
+snippet for b
+for (${1:Variable}; ${2:Condition}; ${3:Step})
+{
+	${4:Code...}
+}
+endsnippet
+
+snippet if b
+if (${1:Condition})
+{
+	${2:Code...}
+}
+endsnippet
+
+snippet else b
+else (${1:Condition})
+{
+	${2:Code...}
+}
+endsnippet
+
+snippet elseif b
+else if (${1:Condition})
+{
+	${2:Code...}
+}
+endsnippet
+
+snippet switch b
+switch (${1:variable})
+{
+	${2:Case/Default}
+}
+endsnippet
+
+snippet case b
+case ${2:Variable case}:
+	${3:Code...}
+	break;
+endsnippet
+
+snippet class b
+class ${1:Name}
+{
+public:
+	${1:Name}();
+	~${1:Name}();
+
+private:
+};
+endsnippet

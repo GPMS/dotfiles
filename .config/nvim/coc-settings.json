@@ -5,12 +5,18 @@
   "list.indicator": " ",
   "list.selectedSignText": " ",
   "clangd.semanticHighlighting":true,
-  // explorer
+
   "explorer.width": 30,
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,
   "explorer.keyMappings": {
     "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit"
+  },
+
+  "snippets.userSnippetsDirectory":"~/.config/nvim/snippets",
+  "snippets.loadFromExtensions": false,
+  "snippets.extends": {
+      "cpp": ["c"]
   }
 }

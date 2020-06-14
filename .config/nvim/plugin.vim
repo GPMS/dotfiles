@@ -38,9 +38,10 @@ let g:sneak#use_ic_scs = 1
 
 " CoC
 let g:coc_global_extensions = [
-            \   'coc-json',
-            \   'coc-clangd'
-            \ ]
+\ 'coc-json',
+\ 'coc-clangd',
+\ 'coc-snippets'
+\ ]
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)

@@ -28,9 +28,9 @@ nnoremap                <C-t>           :! ctags --exclude={.vscode,compile_comm
 "Linting
 
 " Browse completion up/down with ctrl+k/j and confirm with ctrl+l
-inoremap    <expr>      <C-k>           ("\<C-p>")
-inoremap    <expr>      <C-j>           ("\<C-n>")
-inoremap    <expr>      <C-l>           pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+imap        <expr>      <C-k>           ("\<C-p>")
+imap        <expr>      <C-j>           ("\<C-n>")
+imap        <expr>      <C-l>           pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 nmap                    <leader>gd      <Plug>(coc-definition)
 nmap                    <leader>gD      <Plug>(coc-type-definition)

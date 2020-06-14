@@ -27,6 +27,7 @@ set relativenumber
 set cursorline
 set nowrap
 
+set nohlsearch
 set ignorecase
 set smartcase
 set incsearch
