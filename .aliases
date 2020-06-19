@@ -7,7 +7,6 @@ alias install='yay -S '
 alias remove='yay -Rsn'
 alias ping='ping -c 5 '
 alias vim='nvim'
-alias code="code --extensions-dir '/home/gabriel/.config/Code - OSS/Extensions'"
 alias testInternet="ping -c 5 www.google.com"
 
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
