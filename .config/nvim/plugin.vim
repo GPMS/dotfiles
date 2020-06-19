@@ -16,6 +16,7 @@ call plug#begin()
     Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
     Plug 'sheerun/vim-polyglot'
     " Editing
+    Plug 'psliwka/vim-smoothie'
     Plug 'tpope/vim-surround'
     Plug 'jiangmiao/auto-pairs'
     Plug 'voldikss/vim-floaterm'
