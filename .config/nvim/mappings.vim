@@ -1,6 +1,13 @@
 nnoremap                <C-s>           :w<CR>
 nnoremap                <C-q>           :wq!<CR>
 
+" Center
+nmap                    G               Gzz
+nmap                    j               jzz
+nmap                    k               kzz
+nmap                    [[              [[zz
+nmap                    ]]              ]]zz
+
 " Tab resize
 noremap                 <Up>            :resize +2<CR>
 noremap                 <Down>          :resize -1<CR>
@@ -22,7 +29,7 @@ vnoremap                <               <gv
 vnoremap                >               >gv
 
 "FZF
-nnoremap                <C-f>           :Files<CR>
+nnoremap                <C-p>           :Files<CR>
 nnoremap                <C-t>           :! ctags --exclude={.vscode,compile_commands.json} -R .<CR>:Tags<CR>
 
 "Linting
