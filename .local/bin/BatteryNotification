@@ -8,7 +8,7 @@ do
     test -d $batteryDir || echo "No Battery" && break
 
     batteryLevel=$(cat "$batteryDir"/capacity)
-    isCharging=$(cat "$batteryDir"/status | grep -c "Charging")
+    isCharging=$(grep -c "Charging" "$batteryDir"/status)
 
     if [[ $isCharging -eq 1 && $batteryLevel -eq 100 ]]
     then
