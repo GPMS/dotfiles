@@ -33,6 +33,9 @@ Restart()
     killall picom
     picom &
     disown
+    killall polybar
+    polybar mainBar &
+    disown
 }
 
 selection=$(echo -e $content | dmenu -i -c -l 6 -bw 5)
