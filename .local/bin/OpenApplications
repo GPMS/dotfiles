@@ -6,7 +6,6 @@ do
     if ping -q -c 1 -W 1 www.google.com; then
         thunderbird &
         discord &
-        $TERMINAL -e newsboat &
         qbittorrent &
         firefox &
         break
