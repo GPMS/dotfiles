@@ -1,13 +1,6 @@
 nnoremap                <C-s>           :w<CR>
 nnoremap                <C-q>           :wq!<CR>
 
-" Center
-nmap                    G               Gzz
-nmap                    j               jzz
-nmap                    k               kzz
-nmap                    [[              [[zz
-nmap                    ]]              ]]zz
-
 " Tab resize
 noremap                 <Up>            :resize +2<CR>
 noremap                 <Down>          :resize -1<CR>
@@ -43,6 +36,7 @@ nmap                    <leader>gd      <Plug>(coc-definition)
 nmap                    <leader>gD      <Plug>(coc-type-definition)
 nmap                    <leader>gi      <Plug>(coc-implementation)
 nmap                    <leader>gr      <Plug>(coc-references)
+nnoremap    <silent>    K               :call <SID>show_documentation()<CR>
 
 nmap                    <leader>rn      <Plug>(coc-rename)
 

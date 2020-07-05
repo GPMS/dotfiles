@@ -6,6 +6,7 @@ set hidden
 set updatetime=300
 set timeoutlen=500
 set signcolumn=yes
+set scrolloff=999
 filetype plugin indent on
 
 syntax on
