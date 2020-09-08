@@ -12,6 +12,8 @@ super + shift + d
     GoToDotFile
 super + shift + q
     SystemMenu
+super + shift + x
+    xkill
 super + shift + n
     $TERMINAL -e newsboat
 super + d
