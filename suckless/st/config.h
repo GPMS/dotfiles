@@ -8,8 +8,8 @@
 static char *font = "JetBrains Mono:pixelsize=16:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
-    "Symbola:style=Regular:size=16"
-/*	"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", */
+    "Symbola:style=Regular:size=16",
+	"Hack Nerd Font Mono:pixelsize=16:antialias=true:autohint=true",
 };
 
 static int borderpx = 2;
@@ -103,36 +103,33 @@ char *termname = "st-256color";
 unsigned int tabspaces = 4;
 
 /* bg opacity */
-float alpha = 0.7;
+float alpha = 0.90;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+    /* 8 normal colors */
+    [0] = "#232323", /* black   */
+    [1] = "#ff000f", /* red     */
+    [2] = "#8ce10b", /* green   */
+    [3] = "#ffb900", /* yellow  */
+    [4] = "#008df8", /* blue    */
+    [5] = "#6d43a6", /* magenta */
+    [6] = "#00d8eb", /* cyan    */
+    [7] = "#ffffff", /* white   */
 
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+    /* 8 bright colors */
+    [8]  = "#444444", /* black   */
+    [9]  = "#ff2740", /* red     */
+    [10] = "#abe15b", /* green   */
+    [11] = "#ffd242", /* yellow  */
+    [12] = "#0092ff", /* blue    */
+    [13] = "#9a5feb", /* magenta */
+    [14] = "#67fff0", /* cyan    */
+    [15] = "#ffffff", /* white   */
 
-	[255] = 0,
-
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
-	"black",
+    /* special colors */
+    [256] = "#0e1019", /* background */
+    [257] = "#fffaf4", /* foreground */
 };
 
 
@@ -140,9 +137,9 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 7;
-unsigned int defaultbg = 258;
-static unsigned int defaultcs = 256;
+unsigned int defaultfg = 257;
+unsigned int defaultbg = 256;
+static unsigned int defaultcs = 257;
 static unsigned int defaultrcs = 257;
 
 /*
