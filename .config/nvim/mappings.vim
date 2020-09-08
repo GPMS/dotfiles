@@ -33,7 +33,7 @@ imap        <expr>      <C-j>           ("\<C-n>")
 imap        <expr>      <C-l>           pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 nmap                    <leader>gd      <Plug>(coc-definition)
-nmap                    <leader>gD      <Plug>(coc-type-definition)
+nmap                    <leader>gD      :wincmd v<CR> <Plug>(coc-definition)
 nmap                    <leader>gi      <Plug>(coc-implementation)
 nmap                    <leader>gr      <Plug>(coc-references)
 nnoremap    <silent>    K               :call <SID>show_documentation()<CR>
