@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 
 # Terminate already running bar instances
 killall -q polybar
@@ -6,8 +6,8 @@ killall -q polybar
 # Wait until the processes have been shut down
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
-# Launch Polybar, using default config location ~/.config/polybar/config
-polybar mainBar &
+# Launch polybar
+polybar main -c $HOME/.config/polybar/config.ini &
 
 # Launch applets
 killall -q nm-applet
@@ -15,5 +15,3 @@ nm-applet &
 
 killall -q fcitx
 fcitx -d &
-
-echo "Polybar launched..."
