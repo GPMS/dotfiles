@@ -1,12 +1,1 @@
-# vim:ft=bash
-
-xset r rate 200 40
-unclutter --jitter 30 --ignore-scrolling &
-sxhkd &
-feh --no-fehbg --bg-scale $HOME/Wallpapers/wall.jpg
-picom &
-udiskie --automount --notify &
-lxpolkit &
-dunst &
-mpd &
-BatteryNotification &
+.config/X11/xprofile

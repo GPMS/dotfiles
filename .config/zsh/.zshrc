@@ -2,7 +2,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.config/zsh/oh-my-zsh"
+export ZSH="$XDG_CONFIG_HOME/zsh/oh-my-zsh"
 
 [ -n "$XTERM_VERSION" ] && transset-df --id "$WINDOWID" >/dev/null
 
@@ -71,7 +71,12 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-source $HOME/.aliases
+# History in cache directory:
+HISTSIZE=10000000
+SAVEHIST=10000000
+HISTFILE=$XDG_CACHE_HOME/zsh_history
+
+[ -f $XDG_CONFIG_HOME/shell/alias ] && source $XDG_CONFIG_HOME/shell/alias
 
 # User configuration
 

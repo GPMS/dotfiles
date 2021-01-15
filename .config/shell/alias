@@ -9,6 +9,8 @@ alias ping='ping -c 5 '
 alias vim='nvim'
 alias diff='diff --color'
 alias testInternet="ping -c 5 www.google.com"
+alias cal="cal --sunday"
+alias tree="tree -C"
 
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 
