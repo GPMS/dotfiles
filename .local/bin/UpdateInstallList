@@ -1,15 +1,17 @@
 #!/bin/bash
 
-pacman -Qqen > installedPacman-new.txt
+AURNew="~/Documents/installedAUR-new.txt"
 
-if [ ! -z $(diff installedPacman.txt installedPacman-new.txt) ]; then
-    nvim -d installedPacman.txt installedPacman-new.txt
+pacman -Qqen >> ~/Documents/installedPacman-new.txt
+
+if [ ! -z $(diff ~/Documents/installedPacman.txt ~/Documents/installedPacman-new.txt) ]; then
+    nvim -d ~/Documents/installedPacman.txt ~/Documents/installedPacman-new.txt
 fi
 
-pacman -Qqem > installedAUR-new.txt
-if [ ! -z $(diff installedAUR.txt installedAUR-new.txt) ]; then
-    nvim -d installedAUR.txt installedAUR-new.txt
+pacman -Qqem > ~/Documents/installedAUR-new.txt
+if [ ! -z $(diff ~/Documents/installedAUR.txt ~/Documents/installedAUR-new.txt) ]; then
+    nvim -d ~/Documents/installedAUR.txt ~/Documents/installedAUR-new.txt
 fi
 
-mv -f installedPacman-new.txt installedPacman.txt
-mv -f installedAUR-new.txt installedAUR.txt
+mv -f ~/Documents/installedPacman-new.txt ~/Documents/installedPacman.txt
+mv -f ~/Documents/installedAUR-new.txt ~/Documents/installedAUR.txt

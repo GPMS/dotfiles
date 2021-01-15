@@ -30,12 +30,11 @@ fi
 Restart()
 {
     i3-msg restart
-    killall picom
-    picom &
+    killall picom; picom &
     disown
-    killall polybar
-    polybar mainBar &
+    ~/.config/polybar/launch.sh
     disown
+    i3-msg "[instance="dropdown"] move position center"
 }
 
 selection=$(echo -e $content | dmenu -i -c -l 6 -bw 5)
