@@ -34,24 +34,7 @@ LIGHT_BLUE="#039be5"
 LIGHT_GREEN="#7cb342"
 
 # Launch Rofi
-MENU="$(rofi -no-lazy-grab -sep "|" -dmenu -i -p 'System :' \
--hide-scrollbar true \
--bw 0 \
--lines 4 \
--line-padding 10 \
--padding 20 \
--width 15 \
--xoffset 0 -yoffset -805 \
--location 5 \
--columns 1 \
--show-icons -icon-theme "Papirus" \
--font "Fantasque Sans Mono 10" \
--color-enabled true \
--color-window "$BACKGROUND,$BORDER,$SEPARATOR" \
--color-normal "$BACKGROUND_ALT,$FOREGROUND,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
--color-active "$BACKGROUND,$MAGENTA,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
--color-urgent "$BACKGROUND,$YELLOW,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
-<<< "  Lock|  Logout|  Reboot|  Shutdown")"
+MENU=$(echo -e '  Lock\n  Logout\n  Reboot\n  Shutdown' | dmenu -i -fn 'Fantasque Sans Mono 10' -l 4 -c -nb $BACKGROUND -sb $BACKGROUND_ALT -sf $FOREGROUND)
 case "$MENU" in
   *Lock) i3lock ;;
   *Logout) openbox --exit;;
