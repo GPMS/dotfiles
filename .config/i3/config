@@ -9,10 +9,10 @@ set $mod Mod4
 ## AutoStart ##
 exec $HOME/.config/polybar/launch.sh
 exec OpenApplications
-exec $TERMINAL -n "dropdown"
+exec alacritty --title "dropdown"
 
 ## Window Customization ##
-assign [class="Brave-browser"] 1
+assign [class="Chromium"] 1
 assign [class="qBittorrent"] 3
 assign [title="newsboat"] 7
 assign [class="discord"] 8
@@ -20,11 +20,11 @@ assign [class="Thunderbird"] 9
 
 for_window [class="^.*"] border pixel 3
 
-for_window [instance="dropdown"] floating enable
-for_window [instance="dropdown"] resize set 1080 720
-for_window [instance="dropdown"] move position center
-for_window [instance="dropdown"] sticky enable
-for_window [instance="dropdown"] move scratchpad
+for_window [title="dropdown"] floating enable
+for_window [title="dropdown"] resize set 1080 720
+for_window [title="dropdown"] move position center
+for_window [title="dropdown"] sticky enable
+for_window [title="dropdown"] move scratchpad
 
 ## Miscelaneous Bindings ##
 
@@ -38,7 +38,7 @@ floating_modifier $mod
 ## Letter key bindings ##
 bindsym $mod+f                  fullscreen toggle
 
-bindsym $mod+q                  [con_id="__focused__" instance="^(?!dropdown).*$"] kill
+bindsym $mod+q                  [con_id="__focused__" title="^(?!dropdown).*$"] kill
 
 bindsym $mod+e                  layout toggle split
 bindsym $mod+s                  layout stacking
