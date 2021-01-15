@@ -1,162 +1,82 @@
 # vim: ts=2 sw=2
+
 env:
-  #TERM: xterm-256color
   TERM: alacritty
 
 window:
-  #dimensions:
-  #  columns: 0
-  #  lines: 0
-  #position:
-  #  x: 0
-  #  y: 0
   padding:
     x: 6
     y: 6
-  #dynamic_padding: false
-  #decorations: full
-  #startup_mode: Windowed
+  dynamic_title: true
   title: Alacritty
   class:
     instance: Alacritty
     general: Alacritty
-  #gtk_theme_variant: None
+
 scrolling:
   history: 5000
-  #multiplier: 3
-  #auto_scroll: false
-#tabspaces: 8
+
 font:
   normal:
-    family: JetBrains Mono
+    family: Iosevka
     style: Regular
   bold:
-    family: JetBrains Mono
+    family: Iosevka
     style: Bold
   italic:
-    family: JetBrains Mono
+    family: Iosevka
     style: Italic
   bold_italic:
-    family: JetBrains Mono
+    family: Iosevka
     style: Bold Italic
-  size: 13.0
-  offset:
-    x: 1
-    y: 1
-  #glyph_offset:
-  #  x: 0
-  #  y: 0
-  #use_thin_strokes: true
-#draw_bold_text_with_bright_colors: true
+  size: 11.0
+
 colors:
   primary:
-    background: '0x0c0d0e'
-    foreground: '0xb7b8b9'
-    #dim_foreground: '0x9a9a9a'
-    #bright_foreground: '0xffffff'
+    background: '0x0e1019'
+    foreground: '0xfffaf4'
   cursor:
-    #text: '0x000000'
-    cursor: '0xb7b8b9'
+    cursor: '0xfffaf4'
   selection:
     text: '0x282a36'
     background: '0xbbc5ff'
   normal:
-    black:   '0x0c0d0e'
-    red:     '0xe31a1c'
-    green:   '0x31a354'
-    yellow:  '0xdca060'
-    blue:    '0x3182bd'
-    magenta: '0x756bb1'
-    cyan:    '0x80b1d3'
-    white:   '0xb7b8b9'
+    black:   '0x232323'
+    red:     '0xff000f'
+    green:   '0x8ce10b'
+    yellow:  '0xffb900'
+    blue:    '0x008df8'
+    magenta: '0x6d43a6'
+    cyan:    '0x00d8eb'
+    white:   '0x3f3f3f'
   bright:
-    black:   '0x737475'
-    red:     '0xe31a1c'
-    green:   '0x31a354'
-    yellow:  '0xdca060'
-    blue:    '0x3182bd'
-    magenta: '0x756bb1'
-    cyan:    '0x80b1d3'
-    white:   '0xfcfdfe'
-  #dim:
-  #  black:   '0x000000'
-  #  red:     '0x8c3336'
-  #  green:   '0x7a8530'
-  #  yellow:  '0x97822e'
-  #  blue:    '0x506d8f'
-  #  magenta: '0x80638e'
-  #  cyan:    '0x497e7a'
-  #  white:   '0x9a9a9a'
-  #indexed_colors: []
-#visual_bell:
-#  animation: EaseOutExpo
-#  duration: 0
-#  color: '0xffffff'
-background_opacity: 0.70
-selection:
-  #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
-  save_to_clipboard: true
-#dynamic_title: true
-#cursor:
-  #style: Block
-  #unfocused_hollow: true
-#live_config_reload: true
-#working_directory: None
-#winpty_backend: false
-#alt_send_esc: true
-#debug:
-  #render_timer: false
-  #persistent_logging: false
-  #log_level: Warn
-  #print_events: false
-  #ref_test: false
-#mouse:
-  #double_click: { threshold: 300 }
-  #triple_click: { threshold: 300 }
-  #hide_when_typing: false
-  #url:
-    #launcher:
-    #  program: xdg-open
-    #  args: []
-    #modifiers: None
-#mouse_bindings:
-#  - { mouse: Middle, action: PasteSelection }
-# `- { key: V, mods: Control|Shift, action: Paste }`
-#key_bindings:
-  # (Windows, Linux, and BSD only)
-  #- { key: V,        mods: Control|Shift, action: Paste            }
-  #- { key: C,        mods: Control|Shift, action: Copy             }
-  #- { key: Insert,   mods: Shift,         action: PasteSelection   }
-  #- { key: Key0,     mods: Control,       action: ResetFontSize    }
-  #- { key: Equals,   mods: Control,       action: IncreaseFontSize }
-  #- { key: Add,      mods: Control,       action: IncreaseFontSize }
-  #- { key: Subtract, mods: Control,       action: DecreaseFontSize }
-  #- { key: Minus,    mods: Control,       action: DecreaseFontSize }
+    black:   '0x444444'
+    red:     '0xff2740'
+    green:   '0xabe15b'
+    yellow:  '0xffd242'
+    blue:    '0x0092ff'
+    magenta: '0x9a5feb'
+    cyan:    '0x67fff0'
+    white:   '0xffffff'
 
-  # (Windows only)
-  #- { key: Return,   mods: Alt,           action: ToggleFullscreen }
+background_opacity: 0.90
 
-  # (macOS only)
-  #- { key: Key0,   mods: Command,         action: ResetFontSize    }
-  #- { key: Equals, mods: Command,         action: IncreaseFontSize }
-  #- { key: Add,    mods: Command,         action: IncreaseFontSize }
-  #- { key: Minus,  mods: Command,         action: DecreaseFontSize }
-  #- { key: K,      mods: Command,         action: ClearHistory     }
-  #- { key: K,      mods: Command,         chars: "\x0c"            }
-  #- { key: V,      mods: Command,         action: Paste            }
-  #- { key: C,      mods: Command,         action: Copy             }
-  #- { key: H,      mods: Command,         action: Hide             }
-  #- { key: M,      mods: Command,         action: Minimize         }
-  #- { key: Q,      mods: Command,         action: Quit             }
-  #- { key: W,      mods: Command,         action: Quit             }
-  #- { key: F,      mods: Command|Control, action: ToggleFullscreen }
+mouse:
+  url:
+    launcher:
+      program: xdg-open
+      args: []
+    modifiers: None
 
-  #- { key: Paste,                    action: Paste                            }
-  #- { key: Copy,                     action: Copy                             }
-  #- { key: L,         mods: Control, action: ClearLogNotice                   }
-  #- { key: L,         mods: Control, chars: "\x0c"                            }
-  #- { key: PageUp,    mods: Shift,   action: ScrollPageUp,   mode: ~Alt       }
-  #- { key: PageDown,  mods: Shift,   action: ScrollPageDown, mode: ~Alt       }
-  #- { key: Home,      mods: Shift,   action: ScrollToTop,    mode: ~Alt       }
-  #- { key: End,       mods: Shift,   action: ScrollToBottom, mode: ~Alt       }
+key_bindings:
+  - { key: V,              mods: Control|Shift, action: Paste            }
+  - { key: C,              mods: Control|Shift, action: Copy             }
+  - { key: Insert,         mods: Shift,         action: PasteSelection   }
+  - { key: Equals,         mods: Control,       action: ResetFontSize    }
+  - { key: Key0,           mods: Control,       action: IncreaseFontSize }
+  - { key: NumpadSubtract, mods: Control,       action: DecreaseFontSize }
+  - { key: PageUp,         mods: Shift,         action: ScrollPageUp     }
+  - { key: PageDown,       mods: Shift,         action: ScrollPageDown   }
+  - { key: Home,           mods: Shift,         action: ScrollToTop      }
+  - { key: End,            mods: Shift,         action: ScrollToBottom   }
 
