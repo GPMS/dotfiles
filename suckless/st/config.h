@@ -5,11 +5,11 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "JetBrains Mono:pixelsize=16:antialias=true:autohint=true";
+static char *font = "Iosevka:pixelsize=15:style:regular:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
-    "Symbola:style=Regular:size=16",
-	"Hack Nerd Font Mono:pixelsize=16:antialias=true:autohint=true",
+    "Symbola:style=Regular:size=14",
+	"Hack Nerd Font Mono:pixelsize=15:antialias=true:autohint=true",
 };
 
 static int borderpx = 2;
