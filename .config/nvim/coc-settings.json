@@ -1,22 +1,20 @@
 {
-  "diagnostic.signOffset": 9999999,
   "diagnostic.warningSign": " ",
   "diagnostic.errorSign": " ",
+
   "list.indicator": " ",
   "list.selectedSignText": " ",
-  "clangd.semanticHighlighting":true,
 
-  "explorer.width": 30,
+  "clangd.semanticHighlighting":true,
+  "clangd.disableSnippetCompletion": true,
+
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,
-  "explorer.keyMappings": {
+  "explorer.keyMappings.global": {
     "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit"
   },
 
   "snippets.userSnippetsDirectory":"~/.config/nvim/snippets",
-  "snippets.loadFromExtensions": false,
-  "snippets.extends": {
-      "cpp": ["c"]
-  }
+  "snippets.loadFromExtensions": false
 }

@@ -1,5 +1,8 @@
 nnoremap                <C-s>           :w<CR>
-nnoremap                <C-q>           :wq!<CR>
+nnoremap                <C-q>           :q<CR>
+
+nnoremap                H               ^
+nnoremap                L               $
 
 " Tab resize
 noremap                 <Up>            :resize +2<CR>
@@ -17,43 +20,68 @@ nnoremap                <C-l>           :wincmd l<CR>
 nnoremap                <TAB>           :tabnext<CR>
 nnoremap                <S-TAB>         :tabprevious<CR>
 
+" Move text
+vnoremap                J               :m '>+1<CR>gv=gv
+vnoremap                K               :m '<-2<CR>gv=gv
+
 " Better tabbing
 vnoremap                <               <gv
 vnoremap                >               >gv
 
 "FZF
 nnoremap                <C-p>           :Files<CR>
-nnoremap                <C-t>           :! ctags --exclude={.vscode,compile_commands.json} -R .<CR>:Tags<CR>
+nnoremap    <silent>    <C-t>           :! ctags --exclude={.vscode,compile_commands.json} -R .<CR>:Tags<CR>
 
-"Linting
+"Incsearch
+map                     /               <Plug>(incsearch-forward)
+map                     ?               <Plug>(incsearch-backward)
+map                     g/              <Plug>(incsearch-stay)
 
-" Browse completion up/down with ctrl+k/j and confirm with ctrl+l
-imap        <expr>      <C-k>           ("\<C-p>")
-imap        <expr>      <C-j>           ("\<C-n>")
-imap        <expr>      <C-l>           pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
-nmap                    <leader>gd      <Plug>(coc-definition)
-nmap                    <leader>gD      :wincmd v<CR> <Plug>(coc-definition)
-nmap                    <leader>gi      <Plug>(coc-implementation)
-nmap                    <leader>gr      <Plug>(coc-references)
-nnoremap    <silent>    K               :call <SID>show_documentation()<CR>
-
-nmap                    <leader>rn      <Plug>(coc-rename)
-
-nnoremap                <leader>gh      :CocCommand clangd.switchSourceHeader<CR>
-nnoremap                <leader>gH      :vsplit<CR>:CocCommand clangd.switchSourceHeader<CR>
-
-nnoremap                <F1>            :CocCommand explorer<CR>
 nnoremap                <F2>            :TagbarToggle<CR>
 
-" Float Term
-nnoremap                <F3>            :FloatermNew make<CR>
-nnoremap                <F4>            :FloatermNew ./game<CR>
-nnoremap                <F9>            :FloatermNew<CR>
-tnoremap                <F9>            <C-\><C-n>:FloatermNew<CR>
-nnoremap                <F10>           :FloatermPrev<CR>
-tnoremap                <F10>           <C-\><C-n>:FloatermPrev<CR>
-nnoremap                <F11>           :FloatermNext<CR>
-tnoremap                <F11>           <C-\><C-n>:FloatermNext<CR>
-nnoremap                <F12>           :FloatermToggle<CR>
-tnoremap                <F12>           <C-\><C-n>:FloatermToggle<CR>
+" Terminal Function
+let g:term_buf = 0
+let g:term_win = 0
+function! TermToggle(height)
+    if win_gotoid(g:term_win)
+        hide
+    else
+        botright new
+        exec "resize " . a:height
+        try
+            exec "buffer " . g:term_buf
+        catch
+            call termopen($SHELL, {"detach": 0})
+            let g:term_buf = bufnr("")
+            set nonumber
+            set norelativenumber
+            set signcolumn=no
+        endtry
+        startinsert!
+        let g:term_win = win_getid()
+    endif
+endfunction
+
+function! TermOpen(height)
+    if !win_gotoid(g:term_win)
+        botright new
+        exec "resize " . a:height
+        try
+            exec "buffer " . g:term_buf
+        catch
+            call termopen($SHELL, {"detach": 0})
+            let g:term_buf = bufnr("")
+            set nonumber
+            set norelativenumber
+            set signcolumn=no
+        endtry
+        startinsert!
+        let g:term_win = win_getid()
+    endif
+endfunction
+
+nnoremap    <silent>    <A-t>           :call TermToggle(12)<CR>
+tnoremap    <silent>    <A-t>           <C-\><C-n>:call TermToggle(12)<CR>
+
+nnoremap    <silent>    <F3>            :call TermOpen(12)<CR>:startinsert<CR>clear<CR>Scripts/build.sh<CR>
+nnoremap    <silent>    <F4>            :call TermOpen(12)<CR>:startinsert<CR>clear<CR>Scripts/run.sh<CR>
