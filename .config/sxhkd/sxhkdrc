@@ -5,7 +5,7 @@ super + Return
 super + shift + b
     $BROWSER
 super + shift + f
-    $FILE
+    $TERMINAL --title lf -e lf
 super + shift + m
     MpdControl
 super + shift + d
@@ -15,9 +15,9 @@ super + shift + q
 super + shift + x
     xkill
 super + shift + n
-    $TERMINAL -e newsboat
+    $TERMINAL --title newsboat -e newsboat
 super + d
-    $LAUNCHER
+    rofi -modi drun -show drun
 
 ## XF86 Keys ##
 
