@@ -1,11 +1,11 @@
 # vim:ft=sxhkdrc
 
 super + Return
-    $TERMINAL
+    alacritty
 super + shift + b
-    $BROWSER
+    chromium
 super + shift + f
-    $TERMINAL --title lf -e lf
+    alacritty -e lf
 super + shift + m
     MpdControl.sh
 super + shift + d
@@ -15,7 +15,7 @@ super + shift + q
 super + shift + x
     xkill
 super + shift + n
-    $TERMINAL --title newsboat -e newsboat
+    alacritty --title newsboat -e newsboat
 super + d
     rofi -modi drun -show drun
 
