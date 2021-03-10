@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 font=$(fc-list | cut -d : -f 1 | dmenu -l 5 -p "Font:")
 

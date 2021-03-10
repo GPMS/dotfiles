@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 for file in `find -name "*.bpg"`; do
     echo "$file"

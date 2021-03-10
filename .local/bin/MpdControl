@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 selected=`mpc lsplaylist | sort | dmenu -l 6`
 if [ ! -z $selected ]; then
