@@ -1,51 +1,26 @@
 #!/bin/bash
 
-aliases="Aliases"
-aliasesFile="$HOME/.aliases"
+declare -a options=(
+    "Shell Config - $XDG_CONFIG_HOME/shell - profile"
+    "X11 Config - $XDG_CONFIG_HOME/X11 - xprofile"
+    "Neovim Config - $XDG_CONFIG_HOME/nvim - init.vim"
+    "Scripts - $HOME/.local/bin - ."
+    "Polybar Config - $XDG_CONFIG_HOME/polybar - config.ini"
+    "i3 Config File - $XDG_CONFIG_HOME/i3 - config"
+    "Alacritty Config File - $XDG_CONFIG_HOME/alacritty - alacritty.yml"
+    "quit"
+)
 
-profile="Profile"
-profileFile="$HOME/.profile"
+choice=$(printf '%s\n' "${options[@]}" | dmenu -i -l 20 -p 'Edit config:')
 
-xprofile="X Profile"
-xprofileFile="$HOME/.xprofile"
-
-scripts="Scripts"
-scriptsFile="$HOME/.local/bin/"
-
-neovim="NeoVim"
-neovimFile="$HOME/.config/nvim/init.vim"
-
-i3="i3"
-i3File="$HOME/.config/i3/config"
-
-zsh="Zsh"
-zshFile="$HOME/.config/zsh"
-
-polybar="Polybar"
-polybarFile="$HOME/.config/polybar/config"
-
-dmenu="Dmenu"
-dmenuFile="$HOME/.config/dmenu/config.h"
-
-alacritty="Alacritty"
-alacrittyFile="$HOME/.config/alacritty/alacritty.yml"
-
-OpenFile()
-{
-    cd $2
-    $TERMINAL -e $EDITOR $1
-}
-
-configFiles="$aliases\n$profile\n$xprofile\n$scripts\n$neovim\n$i3\n$zsh\n$polybar\n$dmenu\n$alacritty"
-case `echo -e $configFiles | dmenu -i` in
-    $aliases) OpenFile $aliasesFile $HOME ;;
-    $profile) OpenFile $profileFile $HOME ;;
-    $xprofile) OpenFile $xprofileFile $HOME ;;
-    $scripts) OpenFile $scriptsFile $HOME/.local/bin ;;
-    $neovim) OpenFile $neovimFile $HOME/.config/nvim ;;
-    $i3) OpenFile $i3File $HOME/.config/i3 ;;
-    $zsh) OpenFile $zshFile $HOME/.config/zsh ;;
-    $polybar) OpenFile $polybarFile $HOME/.config/polybar ;;
-    $dmenu) OpenFile $dmenuFile $HOME/.config/dmenu ;;
-    $alacritty) OpenFile $alacrittyFile $HOME/.config/alacritty ;;
-esac
+if [[ "$choice" == "quit" || "$choice" == "" ]]; then
+    echo "Program terminated." && exit 1
+elif [[ "choice" ]]; then
+    dir=$(echo "${choice}" | cut -d'-' -f2)
+    file=$(echo "${choice}" | cut -d'-' -f3)
+    cd $dir
+    alacritty -e sh -c "sleep 0.1 && nvim $file" &
+    disown
+else
+    echo "Program terminated." && exit 1
+fi
