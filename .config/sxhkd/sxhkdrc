@@ -7,11 +7,11 @@ super + shift + b
 super + shift + f
     $TERMINAL --title lf -e lf
 super + shift + m
-    MpdControl
+    MpdControl.sh
 super + shift + d
-    GoToDotFile
+    GoToDotFile.bash
 super + shift + q
-    SystemMenu
+    SystemMenu.sh
 super + shift + x
     xkill
 super + shift + n

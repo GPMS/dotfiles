@@ -8,7 +8,7 @@ set $mod Mod4
 
 ## AutoStart ##
 exec $HOME/.config/polybar/launch.sh
-exec OpenApplications
+exec OpenApplications.sh
 exec alacritty --title "dropdown"
 
 ## Window Customization ##
@@ -56,11 +56,10 @@ bindsym $mod+Shift+j            move down
 bindsym $mod+Shift+l            move right
 bindsym $mod+Shift+h            move left
 
-bindsym $mod+Shift+i            exec i3Resize up
-bindsym $mod+Shift+u            exec i3Resize down
-bindsym $mod+Shift+o            exec i3Resize right
-bindsym $mod+Shift+y            exec i3Resize left
-
+bindsym $mod+Shift+i            exec i3Resize.sh up
+bindsym $mod+Shift+u            exec i3Resize.sh down
+bindsym $mod+Shift+o            exec i3Resize.sh right
+bindsym $mod+Shift+y            exec i3Resize.sh left
 
 set $ws1 "1"
 set $ws2 "2"
