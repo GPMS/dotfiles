@@ -9,6 +9,7 @@ set info size
 map . set hidden!
 map x $$f
 map X !$f
+map D Delete
 map o &mimeopen $f
 map O $mimeopen --ask $f
 map gU cd /mnt/Games/extHD-Backup/Documents/Study/University/UFG
@@ -23,6 +24,15 @@ cmd open ${{
 }}
 
 cmd trash %set -f; mv $fx ~/.trash
+
+cmd Delete ${{
+    set -f
+    clear
+    printf "$fx\n"
+    printf "delete?[y/n]"
+    read ans
+    [ $ans = "y" ] && rm -rf $fx
+}}
 
 cmd extract ${{
     set -f
