@@ -15,9 +15,6 @@ call plug#begin()
     Plug 'haya14busa/incsearch.vim'
     " Linting
     Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-    "Plug 'neovim/nvim-lspconfig'
-    "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-    "Plug 'Shougo/deoplete-lsp'
     Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'sheerun/vim-polyglot'
     " Editing
