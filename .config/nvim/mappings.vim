@@ -82,6 +82,9 @@ endfunction
 
 nnoremap    <silent>    <A-t>           :call TermToggle(12)<CR>
 tnoremap    <silent>    <A-t>           <C-\><C-n>:call TermToggle(12)<CR>
-
+tnoremap    <silent>    <C-k>           <C-\><C-n>:wincmd k<CR>
+tnoremap    <silent>    <F3>            clear<CR>Scripts/build.sh<CR>
+tnoremap    <silent>    <F4>            clear<CR>Scripts/run.sh<CR>
 nnoremap    <silent>    <F3>            :call TermOpen(12)<CR>:startinsert<CR>clear<CR>Scripts/build.sh<CR>
 nnoremap    <silent>    <F4>            :call TermOpen(12)<CR>:startinsert<CR>clear<CR>Scripts/run.sh<CR>
+
