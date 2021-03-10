@@ -41,6 +41,8 @@ nnoremap                gF              :vsplit<CR>gf
 
 nnoremap                <F2>            :TagbarToggle<CR>
 
+:nnoremap <Leader>s :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
+
 " Terminal Function
 let g:term_buf = 0
 let g:term_win = 0
