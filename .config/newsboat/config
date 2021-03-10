@@ -10,6 +10,9 @@ bind-key h quit
 bind-key g home
 bind-key G end
 
+color listfocus         default blue bold
+color listfocus_unread  default blue bold
+
 highlight all "---.*---" yellow
 highlight feedlist ".*(0/0))" black
 highlight article "(^Feed:.*|^Title:.*|^Author:.*)" cyan default bold
