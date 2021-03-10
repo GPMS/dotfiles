@@ -2,8 +2,8 @@
 
 selected=`mpc lsplaylist | sort | dmenu -l 6`
 if [ ! -z $selected ]; then
-    mpc -q clear
-    mpc load $selected >> /dev/null
-    mpc -q shuffle
-    mpc -q play
+    mpc --quiet clear
+    mpc --quiet load $selected >> /dev/null
+    mpc --quiet shuffle
+    mpc --quiet play
 fi
