@@ -11,8 +11,7 @@ suspend="Suspend"
 reboot="Reboot"
 shutdown="Shutdown"
 
-if [ $WM = i3 ]
-then
+if [ "$WM" = "i3" ]; then
     reload="Reload WM"
     restart="Restart WM"
     quit="Quit WM"
@@ -20,8 +19,7 @@ else
     isKnownWM=false
 fi
 
-if [ $isKnownWM ]
-then
+if [ $isKnownWM ]; then
     content="$reload\n$restart\n$quit\n$suspend\n$reboot\n$shutdown"
 else
     content="$suspend\n$reboot\n$shutdown"
@@ -37,7 +35,7 @@ Restart()
     i3-msg "[instance="dropdown"] move position center"
 }
 
-selection=$(echo -e $content | dmenu -i -c -l 6 -bw 5)
+selection=$(echo "$content" | dmenu -i -c -l 6 -bw 5)
 case $selection in
     $reload)
         case $WM in
@@ -61,3 +59,4 @@ case $selection in
     $shutdown)
         systemctl poweroff -i;;
 esac
+
