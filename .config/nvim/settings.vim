@@ -1,7 +1,7 @@
 set shortmess+=c
 set noshowmode
 set hidden
-set updatetime=300
+set updatetime=100
 set timeoutlen=500
 set signcolumn=yes
 set scrolloff=999
