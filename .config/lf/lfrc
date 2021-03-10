@@ -9,12 +9,20 @@ set info size
 map . set hidden!
 map x $$f
 map X !$f
+map A CreateFolder
 map D Delete
 map o &mimeopen $f
 map O $mimeopen --ask $f
 map gU cd /mnt/Games/extHD-Backup/Documents/Study/University/UFG
 map gE cd /mnt/Games/extHD-Backup
 map gD cd ~/Downloads
+
+cmd CreateFolder ${{
+    clear
+    printf "Folder name: "
+    read name
+    [ ! -z "$name" ] && mkdir $name
+}}
 
 cmd open ${{
     case $(file --mime-type $f -b) in
