@@ -1,9 +1,10 @@
 set shell zsh
 set shellopts '-eu'
-
 set ifs "\n"
-
 set scrolloff 10
+set ratios 2:2
+set drawbox
+set info size
 
 map <enter> shell
 map x $$f
