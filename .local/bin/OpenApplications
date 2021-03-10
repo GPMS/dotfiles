@@ -1,14 +1,18 @@
 #!/bin/sh
 
+OpenOnce()
+{
+    [ $(pgrep -c "$1") = 0 ] && "$1" &
+}
+
 while :
 do
     # Only open when the PC has an internet connection
     if ping -q -c 1 -W 1 8.8.8.8; then
-        ~/Applications/Thunderbird*.AppImage &
-        ~/Applications/qBittorrent*.AppImage &
-        chromium &
         alacritty --title newsboat --command newsboat &
-        break
+        OpenOnce mailspring
+        OpenOnce qbittorrent
+        OpenOnce chromium & break
     fi
 
     # No internet connection, sleep for a while...
