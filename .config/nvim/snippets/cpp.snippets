@@ -3,8 +3,7 @@ extends c
 priority -49
 
 snippet class "class .. (class)"
-class ${1:name}
-{
+class ${1:name} {
 public:
 	${1/(\w+).*/$1/}();
 	virtual ~${1/(\w+).*/$1/}();
@@ -15,8 +14,7 @@ private:
 endsnippet
 
 snippet struct
-struct $1
-{
+struct $1 {
 	${0: Contents}
 };
 endsnippet
