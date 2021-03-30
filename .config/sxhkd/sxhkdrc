@@ -3,7 +3,7 @@
 super + Return
     alacritty
 super + shift + b
-    chromium
+    google-chrome-stable
 super + shift + f
     alacritty -e lf
 super + shift + m

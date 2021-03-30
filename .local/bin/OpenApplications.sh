@@ -10,9 +10,8 @@ do
     # Only open when the PC has an internet connection
     if ping -q -c 1 -W 1 8.8.8.8; then
         alacritty --title newsboat --command newsboat &
-        OpenOnce mailspring
         OpenOnce qbittorrent
-        OpenOnce chromium & break
+        OpenOnce google-chrome-stable & break
     fi
 
     # No internet connection, sleep for a while...
