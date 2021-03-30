@@ -36,10 +36,10 @@ cmd trash %set -f; mv $fx ~/.trash
 cmd Delete ${{
     set -f
     clear
-    printf "$fx\n"
-    printf "delete?[y/n]"
+    printf "$f\n"
+    printf "delete?[y/n] "
     read ans
-    [ $ans = "y" ] && rm -rf $fx
+    [ $ans = "y" ] && rm -rf $f
 }}
 
 cmd extract ${{
