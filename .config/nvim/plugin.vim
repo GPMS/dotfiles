@@ -18,6 +18,7 @@ call plug#begin()
     Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'sheerun/vim-polyglot'
     " Editing
+    Plug 'kassio/neoterm'
     Plug 'psliwka/vim-smoothie'
     Plug 'tpope/vim-surround'
     Plug 'jiangmiao/auto-pairs'
