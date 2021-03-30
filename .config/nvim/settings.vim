@@ -9,11 +9,7 @@ set mouse=a
 set lazyredraw
 
 filetype plugin indent on
-syntax on
-let g:gruvbox_contrast_dark = 'hard'
-let g:gruvbox_invert_selection = '0'
-colorscheme gruvbox
-set background=dark
+set termguicolors
 
 set tabstop=4 softtabstop=4
 set shiftwidth=4
