@@ -8,7 +8,7 @@ endif
 " Plugins
 call plug#begin()
     " Appearance
-    Plug 'morhetz/gruvbox'
+    Plug 'christianchiarulli/nvcode-color-schemes.vim'
     Plug 'vim-airline/vim-airline'
     Plug 'majutsushi/tagbar'
     Plug 'Yggdroot/indentLine'
