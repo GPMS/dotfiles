@@ -46,9 +46,13 @@ if has("autocmd")
     autocmd! BufWritePost *.vim source %
 endif
 
+augroup highlight_yank
+    autocmd!
+    au TextYankPost * silent! lua vim.highlight.on_yank { higroup='IncSearch', timeout=200 }
+augroup end
+
 highlight VertSplit cterm=NONE
 set fillchars+=vert:\▏
 
 set colorcolumn=121
 highlight ColorColumn ctermbg=0 guibg=#3c3836
-
