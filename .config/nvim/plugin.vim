@@ -28,8 +28,3 @@ call plug#begin()
     Plug 'junegunn/fzf.vim'
 call plug#end()
 
-" Load plugin-specific config files
-source $HOME/.config/nvim/plug-config/coc.vim
-source $HOME/.config/nvim/plug-config/indentline.vim
-" source $HOME/.config/nvim/plug-config/defx.vim
-
