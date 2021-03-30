@@ -6,6 +6,7 @@ set timeoutlen=500
 set signcolumn=yes
 set scrolloff=999
 set mouse=a
+set lazyredraw
 
 filetype plugin indent on
 syntax on
