@@ -8,13 +8,11 @@ set scrolloff=999
 set mouse=a
 set lazyredraw
 
-filetype plugin indent on
 set termguicolors
 
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
-set smarttab
 set smartindent
 set ignorecase
 
@@ -23,14 +21,13 @@ set foldnestmax=3
 set foldlevel=3
 set nofoldenable
 
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 set number
 set relativenumber
 set nowrap
 
 set nohlsearch
 set smartcase
-set incsearch
 
 set noswapfile
 set nobackup
@@ -51,7 +48,6 @@ augroup highlight_yank
 augroup end
 
 highlight VertSplit cterm=NONE
-set fillchars+=vert:\▏
 
 set colorcolumn=121
 highlight ColorColumn ctermbg=0 guibg=#3c3836
