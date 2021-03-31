@@ -3,7 +3,6 @@ let g:coc_global_extensions = [
 \ 'coc-clangd',
 \ 'coc-snippets',
 \ 'coc-explorer',
-\ 'coc-vimlsp'
 \ ]
 
 function! ShowDocumentation()
@@ -30,23 +29,23 @@ command! -nargs=0 Format :call CocAction('format')
 " Add `:Fold` command to fold current buffer.
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
-imap        <expr>      <C-k>           ("\<C-p>")
-imap        <expr>      <C-j>           ("\<C-n>")
-imap        <expr>      <C-l>           pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+imap     <silent><expr> <C-k>           ("\<C-p>")
+imap     <silent><expr> <C-j>           ("\<C-n>")
+imap     <silent><expr> <C-l>           pubvisible() ? "\<C-y>" : "\<C-g>u\<CR"
 inoremap <silent><expr> <C-space>       coc#refresh()
 
-nmap                    <leader>gd      <Plug>(coc-definition)
-nmap                    <leader>gD      :wincmd v<CR> <Plug>(coc-definition)
-nmap                    <leader>gi      <Plug>(coc-implementation)
-nmap                    <leader>gr      <Plug>(coc-references)
-nnoremap    <silent>    K               :call ShowDocumentation()<CR>
-xmap                    <leader>f       <Plug>(coc-format-selected)
-nmap                    <leader>f       <Plug>(coc-format-selected)
+nmap        <silent>    <Leader>gd      <Plug>(coc-definition)
+nmap        <silent>    <Leader>gD      :wincmd v<CR> <Plug>(coc-definition)
+nmap        <silent>    <Leader>gi      <Plug>(coc-implementation)
+nmap        <silent>    <Leader>gr      <Plug>(coc-references)
+nnoremap    <silent>    <Leader>k       :call ShowDocumentation()<CR>
+xmap        <silent>    <Leader>f       <Plug>(coc-format-selected)
+nmap        <silent>    <Leader>f       <Plug>(coc-format-selected)
 
-nmap                    <leader>rn      <Plug>(coc-rename)
+nmap        <silent>    <Leader>rn      <Plug>(coc-rename)
 
-nnoremap                <leader>gh      :CocCommand clangd.switchSourceHeader<CR>
-nnoremap                <leader>gH      :vsplit<CR>:CocCommand clangd.switchSourceHeader<CR>
+nnoremap    <silent>    <Leader>gh      :CocCommand clangd.switchSourceHeader<CR>
+nnoremap    <silent>    <Leader>gH      :vsplit<CR>:CocCommand clangd.switchSourceHeader<CR>
 
-nnoremap                <F1>            :CocCommand explorer<CR>
+nnoremap    <silent>    <F1>            :CocCommand explorer<CR>
 
