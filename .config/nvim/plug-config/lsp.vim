@@ -1,20 +1,24 @@
-lua require'lspconfig'.clangd.setup{}
-let g:deoplete#enable_at_startup = 1
+luafile ~/.config/nvim/lua/lsp/init.lua
+luafile ~/.config/nvim/lua/lsp/lsp-clangd.lua
+luafile ~/.config/nvim/lua/lsp/lsp-vim.lua
+luafile ~/.config/nvim/lua/lsp/lsp-python.lua
+luafile ~/.config/nvim/lua/lsp/lsp-bash.lua
+luafile ~/.config/nvim/lua/lsp/lsp-lua.lua
 
-imap        <expr>      <C-k>           ("\<C-p>")
-imap        <expr>      <C-j>           ("\<C-n>")
-imap        <expr>      <C-l>           pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-inoremap <silent><expr> <C-space>       coc#refresh()
+nnoremap <silent>       gh         :ClangdSwitchSourceHeader<CR>
+nnoremap <silent>       gH         :vsplit<CR>:ClangdSwitchSourceHeader<CR>
+nnoremap <silent>       gd         :lua vim.lsp.buf.definition()<CR>
+nnoremap <silent>       gD         :lua vim.lsp.buf.declaration()<CR>
+nnoremap <silent>       gi         :lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent>       gr         :lua vim.lsp.buf.references()<CR>
+nnoremap <silent>       <Leader>k  :lua vim.lsp.buf.hover()<CR>
+nnoremap <silent>       <Leader>D  :lua vim.lsp.buf.type_definition()<CR>
+nnoremap <silent>       <Leader>rn :lua vim.lsp.buf.rename()<CR>
+nnoremap <silent>       <Leader>e  :lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
+nnoremap <silent>       <Leader>p  :lua vim.lsp.diagnostic.goto_prev()<CR>
+nnoremap <silent>       <Leader>n  :lua vim.lsp.diagnostic.goto_next()<CR>
 
-nmap                    <leader>gd      <Plug>(coc-definition)
-nmap                    <leader>gD      :wincmd v<CR> <Plug>(coc-definition)
-nmap                    <leader>gi      <Plug>(coc-implementation)
-nmap                    <leader>gr      <Plug>(coc-references)
-nnoremap    <silent>    K               :call ShowDocumentation()<CR>
-xmap                    <leader>f       <Plug>(coc-format-selected)
-nmap                    <leader>f       <Plug>(coc-format-selected)
+" Autoformat
+autocmd BufWritePre *.c,*.cpp,*.h lua vim.lsp.buf.formatting_sync(nil, 1000)
 
-nmap                    <leader>rn      <Plug>(coc-rename)
-
-nnoremap                <leader>gh      :ClangdSwitchSourceHeader<CR>
-nnoremap                <leader>gH      :vsplit<CR>:ClangdSwitchSourceHeader<CR>
+highlight! link mkdLineBreak NONE

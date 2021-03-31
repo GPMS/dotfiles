@@ -23,7 +23,6 @@ set foldnestmax=3
 set foldlevel=3
 set nofoldenable
 
-set completeopt-=preview
 set clipboard=unnamedplus
 set number
 set relativenumber

@@ -14,8 +14,9 @@ call plug#begin()
     Plug 'Yggdroot/indentLine'
     Plug 'haya14busa/incsearch.vim'
     " Linting
-    Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
     Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+    Plug 'neovim/nvim-lspconfig'
+    Plug 'nvim-lua/completion-nvim'
     Plug 'sheerun/vim-polyglot'
     " Editing
     Plug 'kassio/neoterm'
