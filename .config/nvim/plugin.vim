@@ -10,11 +10,12 @@ call plug#begin()
     " Appearance
     Plug 'christianchiarulli/nvcode-color-schemes.vim'
     Plug 'vim-airline/vim-airline'
+    Plug 'kyazdani42/nvim-web-devicons'
+    Plug 'kyazdani42/nvim-tree.lua'
     Plug 'majutsushi/tagbar'
     Plug 'Yggdroot/indentLine'
     Plug 'haya14busa/incsearch.vim'
     " Linting
-    Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'neovim/nvim-lspconfig'
     Plug 'nvim-lua/completion-nvim'
     Plug 'sheerun/vim-polyglot'
