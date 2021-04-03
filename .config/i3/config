@@ -12,7 +12,7 @@ exec OpenApplications.sh
 exec alacritty --title "dropdown"
 
 ## Window Customization ##
-assign [class="google-chrome"] 1
+assign [class="Google-chrome"] 1
 assign [class="qBittorrent"] 3
 assign [title="newsboat"] 7
 assign [class="discord"] 8
