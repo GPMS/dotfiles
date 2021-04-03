@@ -1,4 +1,4 @@
-[submodule ".config/nvim"]
-	path = .config/nvim
+[submodule "/home/gabriel/.config/nvim"]
+	path = /home/gabriel/.config/nvim
 	url = https://github.com/GPMS/neovim.git
 	branch = master
