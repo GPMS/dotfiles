@@ -1,7 +1,7 @@
 # vim:ft=sxhkdrc
 
 super + Return
-    alacritty
+    kitty
 super + shift + b
     google-chrome-stable
 super + shift + f
@@ -15,7 +15,7 @@ super + shift + q
 super + shift + x
     xkill
 super + shift + n
-    alacritty --title newsboat -e newsboat
+    kitty --title "newsboat" newsboat
 super + d
     rofi -modi drun -show drun
 

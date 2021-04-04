@@ -9,7 +9,7 @@ set $mod Mod4
 ## AutoStart ##
 exec $HOME/.config/polybar/launch.sh
 exec OpenApplications.sh
-exec alacritty --title "dropdown"
+exec kitty --title "dropdown"
 
 ## Window Customization ##
 assign [class="Google-chrome"] 1

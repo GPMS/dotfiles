@@ -8,6 +8,7 @@ declare -a options=(
     "Polybar Config - $XDG_CONFIG_HOME/polybar - config.ini"
     "i3 Config File - $XDG_CONFIG_HOME/i3 - config"
     "Alacritty Config File - $XDG_CONFIG_HOME/alacritty - alacritty.yml"
+    "Kitty Config File - $XDG_CONFIG_HOME/kitty - kitty.conf"
     "quit"
 )
 
@@ -19,7 +20,7 @@ elif [[ "choice" ]]; then
     dir=$(echo "${choice}" | cut -d'-' -f2)
     file=$(echo "${choice}" | cut -d'-' -f3)
     cd $dir
-    alacritty -e sh -c "sleep 0.1 && nvim $file" &
+    kitty nvim $file &
     disown
 else
     echo "Program terminated." && exit 1
