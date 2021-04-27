@@ -9,8 +9,8 @@ set info size
 map . set hidden!
 map x $$f
 map X !$f
-map A CreateFolder
 map a NewFile
+map A NewFolder
 map D Delete
 map o &mimeopen $f
 map O $mimeopen --ask $f
@@ -25,7 +25,7 @@ cmd NewFile ${{
     [ ! -z "$name" ] && touch $name
 }}
 
-cmd CreateFolder ${{
+cmd NewFolder ${{
     clear
     printf "Folder name: "
     read name
