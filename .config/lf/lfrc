@@ -33,13 +33,18 @@ cmd open ${{
 
 cmd trash %set -f; mv $fx ~/.trash
 
+
 cmd Delete ${{
     set -f
     clear
-    printf "$f\n"
+    files=`echo $fx | xargs`
+    echo $fx
     printf "delete?[y/n] "
     read ans
-    [ $ans = "y" ] && rm -rf $f
+    if [ $ans = "y" ]; then
+        numItems=`echo $fx | wc -w`
+        echo $fx | xargs -n1 -P$numItems -t rm -rf
+    fi
 }}
 
 cmd extract ${{
