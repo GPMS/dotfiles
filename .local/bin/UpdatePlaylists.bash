@@ -1,16 +1,16 @@
 #!/bin/bash
 
-cd $HOME/Music
+cd "$HOME"/Music || exit
 
-find *ED* -name "*.flac" | sort -V > playlists/EDs.m3u
-find *OP* -name "*.flac" | sort -V > playlists/OPs.m3u
-find *OST* -name "*.flac" | sort -V > playlists/OSTs.m3u
-find *Instrumental* -name "*.flac" | sort -V > playlists/Instrumental.m3u
-find *挿入歌* -name "*.flac" | sort -V > playlists/挿入歌.m3u
+find -- *ED* -name "*.flac" | sort -V > playlists/EDs.m3u
+find -- *OP* -name "*.flac" | sort -V > playlists/OPs.m3u
+find -- *OST* -name "*.flac" | sort -V > playlists/OSTs.m3u
+find -- *Instrumental* -name "*.flac" | sort -V > playlists/Instrumental.m3u
+find -- *挿入歌* -name "*.flac" | sort -V > playlists/挿入歌.m3u
 
 # Get all unique series names
-all=$(echo -e `find . -name "*.flac" -printf '%P\n' | cut -d "-" -f 1 | sort | uniq`)
-IFS=' ' read -r -a series <<< $all
+all="$(echo -e $(find . -name "*.flac" -printf '%P\n' | cut -d "-" -f 1 | sort | uniq))"
+IFS=' ' read -r -a series <<< "$all"
 
 # Add playlist for each series
 for item in "${series[@]}"; do

@@ -2,7 +2,7 @@
 
 OpenOnce()
 {
-    [ $(pgrep -c "$1") = 0 ] && "$1" &
+    [ "$(pgrep -c "$1")" = 0 ] && "$1" &
 }
 
 while :
@@ -11,7 +11,7 @@ do
     if ping -q -c 1 -W 1 8.8.8.8; then
         kitty --title "newsboat" newsboat &
         OpenOnce qbittorrent
-        [ $(pgrep -c chrome) = 0 ] && google-chrome-stable &
+        [ "$(pgrep -c chrome)" = 0 ] && google-chrome-stable &
         break
     fi
 

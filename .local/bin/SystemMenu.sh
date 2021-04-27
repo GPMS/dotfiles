@@ -1,9 +1,5 @@
 #!/bin/sh
 
-confirm() {
-    echo -e "Yes\nNo" | rofi -dmenu -i -format d -selected-row 1 -p "${1:-Confirm: }"
-}
-
 WM=$XDG_CURRENT_DESKTOP
 isKnownWM=true
 
@@ -29,34 +25,32 @@ Restart()
 {
     i3-msg restart
     killall picom; picom &
-    disown
     ~/.config/polybar/launch.sh
-    disown
     i3-msg "[instance="dropdown"] move position center"
 }
 
 selection=$(echo "$content" | dmenu -i -c -l 6 -bw 5)
 case $selection in
-    $reload)
+    "$reload")
         case $WM in
             i3)
                 i3-msg reload;;
         esac;;
-    $restart)
+    "$restart")
         case $WM in
             i3)
                 Restart;;
         esac;;
-    $quit)
+    "$quit")
         case $WM in
             i3)
                 i3-msg exit;;
         esac;;
-    $suspend)
+    "$suspend")
         systemctl suspend -i;;
-    $reboot)
+    "$reboot")
         systemctl reboot -i;;
-    $shutdown)
+    "$shutdown")
         systemctl poweroff -i;;
 esac
 

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 printf "New browser: "
-read browser
+read -r browser
 
-xdg-mime default $browser x-scheme-handler/http
-xdg-mime default $browser x-scheme-handler/https
+xdg-mime default "$browser" x-scheme-handler/http
+xdg-mime default "$browser" x-scheme-handler/https
