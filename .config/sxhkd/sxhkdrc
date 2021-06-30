@@ -5,7 +5,7 @@ super + Return
 super + shift + b
     chromium
 super + shift + f
-    alacritty -e lf
+    kitty lf
 super + shift + q
     SystemMenu.sh
 super + shift + x

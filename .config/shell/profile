@@ -6,7 +6,7 @@ export XMODIFIERS=@im=fcitx
 export GTK_IM_MODULE=fcitx
 
 export LANG=en_GB.UTF-8
-export TERMINAL="alacritty"
+export TERMINAL="kitty"
 export EDITOR="nvim"
 export VISUAL="nvim"
 export FILE="thunar"
