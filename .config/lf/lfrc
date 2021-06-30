@@ -45,13 +45,13 @@ cmd trash %set -f; mv $fx ~/.trash
 cmd Delete ${{
     set -f
     clear
-    files=`echo $fx | xargs`
+    files=$(echo $fx | sed 's/\(.*\)/"\1"/' | xargs -d "\n")
     echo $fx
-    printf "delete?[y/n] "
+    printf "delete? [y/n] "
     read ans
     if [ $ans = "y" ]; then
-        numItems=`echo $fx | wc -w`
-        echo $fx | xargs -n1 -P$numItems -t rm -rf
+        numItems=$(echo $fx | wc -l)
+        echo $files | xargs -n1 -P$numItems -t rm -rf
     fi
 }}
 
