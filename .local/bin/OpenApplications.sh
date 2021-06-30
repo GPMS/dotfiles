@@ -11,8 +11,8 @@ do
     if ping -q -c 1 -W 1 8.8.8.8; then
         kitty --title "newsboat" newsboat &
         OpenOnce qbittorrent
-        [ "$(pgrep -c chrome)" = 0 ] && google-chrome-stable &
-        break
+        OpenOnce chromium
+        exit
     fi
 
     # No internet connection, sleep for a while...

@@ -10,7 +10,7 @@ set $mod Mod4
 exec kitty --title "dropdown"
 
 ## Window Customization ##
-assign [class="Google-chrome"] 1
+assign [class="Chromium"] 1
 assign [class="qBittorrent"] 3
 assign [title="newsboat"] 7
 assign [class="discord"] 8
