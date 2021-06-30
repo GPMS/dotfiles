@@ -15,7 +15,7 @@ super + shift + n
 super + shift + s
     LaunchScript.sh
 super + d
-    rofi -modi drun -show drun
+    i3-dmenu-desktop -dmenu="dmenu -i -c -l 5 -p 'Program'"
 
 ## XF86 Keys ##
 
