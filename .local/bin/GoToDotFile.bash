@@ -14,12 +14,12 @@ declare -a options=(
 
 choice=$(printf '%s\n' "${options[@]}" | dmenu -i -l 20 -p 'Edit config:')
 
-if [[ "$choice" == "quit" || -z "$choice" ]]; then
-    echo "Program terminated." && exit 1
-else
-    dir=$(echo "${choice}" | cut -d'-' -f2)
-    file=$(echo "${choice}" | cut -d'-' -f3)
-    cd $dir || exit
-    kitty nvim $file &
-    disown
+if [[ -z "$choice" ]]; then
+    echo "Program terminated."
+    exit 1
 fi
+
+dir=$(echo "${choice}" | cut -d'-' -f2)
+file=$(echo "${choice}" | cut -d'-' -f3)
+cd $dir || exit
+kitty nvim $file &
