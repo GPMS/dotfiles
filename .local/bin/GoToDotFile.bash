@@ -13,7 +13,7 @@ declare -a options=(
     "quit"
 )
 
-choice=$(printf '%s\n' "${options[@]}" | dmenu -i -l 20 -p 'Edit config:')
+choice=$(printf '%s\n' "${options[@]}" | dmenu -i -c -l 5 -p 'Edit config:')
 
 if [[ -z "$choice" ]]; then
     echo "Program terminated."
