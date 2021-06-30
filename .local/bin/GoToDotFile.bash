@@ -9,6 +9,7 @@ declare -a options=(
     "i3 Config File - $XDG_CONFIG_HOME/i3 - config"
     "Alacritty Config File - $XDG_CONFIG_HOME/alacritty - alacritty.yml"
     "Kitty Config File - $XDG_CONFIG_HOME/kitty - kitty.conf"
+    "SXKHD Mappings - $XDG_CONFIG_HOME/sxhkd - sxhkdrc"
     "quit"
 )
 
