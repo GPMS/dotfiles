@@ -13,5 +13,5 @@ polybar main -c $HOME/.config/polybar/config.ini &
 killall -q nm-applet
 nm-applet &
 
-killall -q fcitx
-fcitx -d &
+# Launch IME
+ibus-daemon -drx
