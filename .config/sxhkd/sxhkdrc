@@ -6,16 +6,14 @@ super + shift + b
     chromium
 super + shift + f
     alacritty -e lf
-super + shift + m
-    MpdControl.sh
-super + shift + d
-    GoToDotFile.bash
 super + shift + q
     SystemMenu.sh
 super + shift + x
     xkill
 super + shift + n
     kitty --title "newsboat" newsboat
+super + shift + s
+    LaunchScript.sh
 super + d
     rofi -modi drun -show drun
 
