@@ -12,3 +12,5 @@ dunst &
 mpd &
 BatteryNotification &
 appimagelauncherd &
+$HOME/.config/polybar/launch.sh
+OpenApplications.sh

@@ -7,8 +7,6 @@ smart_gaps on
 set $mod Mod4
 
 ## AutoStart ##
-exec $HOME/.config/polybar/launch.sh
-exec OpenApplications.sh
 exec kitty --title "dropdown"
 
 ## Window Customization ##
