@@ -1,12 +1,15 @@
 appimagelauncher
 bear
-geekbench
+exfalso
+ibus-mozc
+lazygit-bin
 lf
 libjson
+libva-vdpau-driver-chromium
 lightdm-webkit-theme-aether-git
 logisim
 milton
-neovim-git
+neovim-nightly-bin
 nerd-fonts-hack
 otf-takao
 polybar
@@ -17,6 +20,5 @@ ttf-iosevka
 ttf-symbola
 ttf-unifont
 ttf-vlgothic
-visual-studio-code-bin
 warsaw-bin
 yay
