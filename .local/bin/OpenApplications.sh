@@ -10,7 +10,6 @@ do
     # Only open when the PC has an internet connection
     if ping -q -c 1 -W 1 8.8.8.8; then
         kitty --title "newsboat" newsboat &
-        OpenOnce qbittorrent
         OpenOnce "$BROWSER"
         exit
     fi
