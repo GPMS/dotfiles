@@ -13,9 +13,9 @@ exec LaunchPolybar.sh
 
 ## Window Customization ##
 assign [class="Chromium"] 1
+assign [class="Google-chrome"] 1
 assign [class="qBittorrent"] 3
 assign [title="newsboat"] 7
-assign [class="KeePassXC"] 8
 assign [class="discord"] 9
 
 for_window [class="^.*"] border pixel 3
