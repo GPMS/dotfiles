@@ -5,6 +5,7 @@ gaps inner 5
 gaps outer 5
 smart_gaps on
 set $mod Mod4
+font pango:Droid serif 10
 
 ## AutoStart ##
 exec kitty --title "dropdown"
