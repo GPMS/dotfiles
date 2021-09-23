@@ -16,6 +16,7 @@ map o &mimeopen $f
 map O $mimeopen --ask $f
 map gU cd /mnt/Games/extHD-Backup/Documents/Study/University/UFG
 map gE cd /mnt/Games/extHD-Backup
+map gd cd ~/Documents
 map gD cd ~/Downloads
 
 cmd NewFile ${{
