@@ -1,15 +1,21 @@
 #!/bin/sh
 
-pacman -Qqen >> ~/Documents/installedPacman-new.txt
+pacmanPath="$HOME/Documents/packages/installedPacman.txt"
+pacmanNewPath="$HOME/Documents/packages/installedPacman-new.txt"
 
-if [ -n "$(diff ~/Documents/installedPacman.txt ~/Documents/installedPacman-new.txt)" ]; then
-    nvim -d ~/Documents/installedPacman.txt ~/Documents/installedPacman-new.txt
+aurPath="$HOME/Documents/packages/installedAUR.txt"
+aurNewPath="$HOME/Documents/packages/installedAUR-new.txt"
+
+pacman -Qqen >> "$pacmanNewPath"
+
+if [ -n "$(diff "$pacmanPath" "$pacmanNewPath")" ]; then
+    nvim -d "$pacmanPath" "$pacmanNewPath"
 fi
 
-pacman -Qqem > ~/Documents/installedAUR-new.txt
-if [ -n "$(diff ~/Documents/installedAUR.txt ~/Documents/installedAUR-new.txt)" ]; then
-    nvim -d ~/Documents/installedAUR.txt ~/Documents/installedAUR-new.txt
+pacman -Qqem > "$aurNewPath"
+if [ -n "$(diff "$aurPath" "$aurNewPath")" ]; then
+    nvim -d "$aurPath" "$aurNewPath"
 fi
 
-mv -f ~/Documents/installedPacman-new.txt ~/Documents/installedPacman.txt
-mv -f ~/Documents/installedAUR-new.txt ~/Documents/installedAUR.txt
+mv -f "$pacmanNewPath" "$pacmanPath"
+mv -f "$aurNewPath" "$aurPath"
