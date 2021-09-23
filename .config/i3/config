@@ -8,6 +8,7 @@ set $mod Mod4
 
 ## AutoStart ##
 exec kitty --title "dropdown"
+exec LaunchPolybar.sh
 
 ## Window Customization ##
 assign [class="Chromium"] 1
