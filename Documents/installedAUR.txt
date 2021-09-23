@@ -1,5 +1,6 @@
 appimagelauncher
 bear
+bfg
 exfalso
 ibus-mozc
 lazygit-bin
@@ -8,11 +9,13 @@ libjson
 libva-vdpau-driver-chromium
 lightdm-webkit-theme-aether-git
 logisim
+makefile2graph
 milton
-neovim-nightly-bin
 nerd-fonts-hack
+nsight-graphics
 otf-takao
 polybar
+postman-bin
 pulseaudio-ctl
 siji-git
 simple-mtpfs
@@ -20,5 +23,6 @@ ttf-iosevka
 ttf-symbola
 ttf-unifont
 ttf-vlgothic
+visual-studio-code-bin
 warsaw-bin
 yay
