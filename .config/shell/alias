@@ -12,6 +12,7 @@ alias diff='diff --color'
 alias testInternet="ping -c 5 www.google.com"
 alias cal="cal --sunday"
 alias tree="tree -C"
+alias scrot="scrot ~/Pictures/%Y-%m-%d-%H%M%S.png"
 
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 
