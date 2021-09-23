@@ -1,7 +1,5 @@
 #!/bin/sh
 
-browser="chromium"
-
 searchTerm="$( printf "" | dmenu -c -p "Search Term:")"
 if [ -z "$searchTerm" ]; then
     echo "Empty search query!"
@@ -30,5 +28,5 @@ case $option in
         ;;
 esac
 
-$browser "https://$url"
+$BROWSER "https://$url"
 i3-msg "workspace 1"

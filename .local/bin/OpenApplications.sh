@@ -11,7 +11,7 @@ do
     if ping -q -c 1 -W 1 8.8.8.8; then
         kitty --title "newsboat" newsboat &
         OpenOnce qbittorrent
-        OpenOnce chromium
+        OpenOnce "$BROWSER"
         exit
     fi
 

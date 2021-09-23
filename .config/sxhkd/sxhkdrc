@@ -3,7 +3,7 @@
 super + Return
     kitty
 super + shift + b
-    chromium
+    $BROWSER
 super + shift + f
     kitty lf
 super + shift + q
