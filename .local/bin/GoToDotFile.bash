@@ -3,7 +3,7 @@
 declare -a options=(
     "Shell Config - $XDG_CONFIG_HOME/shell - profile"
     "X11 Config - $XDG_CONFIG_HOME/X11 - xprofile"
-    "Neovim Config - $XDG_CONFIG_HOME/nvim - init.vim"
+    "Neovim Config - $XDG_CONFIG_HOME/nvim - init.lua"
     "Scripts - $HOME/.local/bin - ."
     "Polybar Config - $XDG_CONFIG_HOME/polybar - config.ini"
     "i3 Config File - $XDG_CONFIG_HOME/i3 - config"
