@@ -5,7 +5,7 @@ do
     batteryDir="/sys/class/power_supply/BAT0"
 
     # Stop if there is no battery
-    #test -d $batteryDir || echo "No Battery" && break
+    test -d $batteryDir || echo "No Battery" && break
 
     batteryLevel=$(cat "$batteryDir"/capacity)
     isCharging=$(grep -c "Charging" "$batteryDir"/status)

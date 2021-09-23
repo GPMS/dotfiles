@@ -10,6 +10,6 @@ udiskie --automount --notify --tray &
 lxpolkit &
 dunst &
 mpd &
-BatteryNotification &
+BatteryNotification.sh &
 appimagelauncherd &
 OpenApplications.sh
