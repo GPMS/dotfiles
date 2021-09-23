@@ -10,6 +10,7 @@ declare -a options=(
     "Alacritty Config File - $XDG_CONFIG_HOME/alacritty - alacritty.yml"
     "Kitty Config File - $XDG_CONFIG_HOME/kitty - kitty.conf"
     "SXKHD Mappings - $XDG_CONFIG_HOME/sxhkd - sxhkdrc"
+    "Newsboat - $XDG_CONFIG_HOME/newsboat - config"
     "quit"
 )
 
