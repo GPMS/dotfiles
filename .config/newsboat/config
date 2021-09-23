@@ -10,6 +10,10 @@ bind-key h quit
 bind-key g home
 bind-key G end
 
+# 'day of month' 'month name abbr' 'year'
+# taken from 'man strftime'
+datetime-format "%d %b %Y"
+
 color listfocus         default blue bold
 color listfocus_unread  default blue bold
 
