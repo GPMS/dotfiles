@@ -16,7 +16,6 @@ binutils
 bison
 bzip2
 ccls
-chromium
 chrony
 clang
 cloc
@@ -30,6 +29,7 @@ desmume
 device-mapper
 dhcpcd
 diffutils
+discord
 dunst
 e2fsprogs
 efibootmgr
@@ -47,6 +47,7 @@ gawk
 gcc
 gcc-libs
 gdb
+gedit
 gettext
 git
 git-filter-repo
@@ -138,6 +139,7 @@ nnn
 nomacs
 noto-fonts
 noto-fonts-cjk
+npm
 ntfs-3g
 ntp
 nvidia
@@ -147,6 +149,7 @@ pacman
 pacman-contrib
 patch
 pciutils
+perf
 perl
 perl-file-mimeinfo
 picom

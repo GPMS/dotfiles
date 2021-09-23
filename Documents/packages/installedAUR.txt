@@ -2,6 +2,7 @@ appimagelauncher
 bear
 bfg
 exfalso
+google-chrome
 ibus-mozc
 lazygit-bin
 lf
