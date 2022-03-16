@@ -5,7 +5,6 @@ alias search='yay -Ss'
 alias clean='yay -Rsnu $(yay -Qqdt); yay -Sc'
 alias install='yay -S '
 alias remove='yay -Rsn'
-alias cat='bat'
 alias ping='ping -c 5 '
 alias vim='nvim'
 alias diff='diff --color'
@@ -15,4 +14,5 @@ alias tree="tree -C"
 alias scrot="scrot ~/Pictures/%Y-%m-%d-%H%M%S.png"
 
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+alias check='dstat -cdnmgsf --top-cpu --top-bio'
 
