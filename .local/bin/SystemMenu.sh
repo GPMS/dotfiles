@@ -25,7 +25,7 @@ Restart()
 {
     i3-msg restart
     killall picom; picom &
-    ~/.config/polybar/launch.sh
+    LaunchPolybar.sh
     i3-msg "[instance="dropdown"] move position center"
 }
 
