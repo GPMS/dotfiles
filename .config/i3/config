@@ -9,7 +9,7 @@ font pango:Droid serif 10
 
 ## AutoStart ##
 exec kitty --title "dropdown"
-exec LaunchPolybar.sh
+exec $HOME/.local/bin/LaunchPolybar.sh
 
 ## Window Customization ##
 assign [class="Chromium"] 1
