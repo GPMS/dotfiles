@@ -13,7 +13,7 @@ super + shift + x
 super + shift + n
     kitty --title "newsboat" newsboat
 super + shift + s
-    LaunchScript.sh
+    LaunchScript.bash
 super + d
     i3-dmenu-desktop -dmenu="dmenu -i -c -l 5 -p 'Program'"
 
