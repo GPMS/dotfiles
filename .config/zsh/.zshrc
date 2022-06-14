@@ -76,6 +76,9 @@ HISTSIZE=10000000
 SAVEHIST=10000000
 HISTFILE=$XDG_CACHE_HOME/zsh_history
 
+# Ignore duplicate commands
+setopt histignoredups
+
 [ -f $XDG_CONFIG_HOME/shell/alias ] && source $XDG_CONFIG_HOME/shell/alias
 
 # User configuration
