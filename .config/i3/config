@@ -13,6 +13,7 @@ exec $HOME/.local/bin/LaunchPolybar.sh
 
 ## Window Customization ##
 assign [class="Chromium"] 1
+assign [class="firefox"] 1
 assign [class="Google-chrome"] 1
 assign [class="qBittorrent"] 3
 assign [title="newsboat"] 7
