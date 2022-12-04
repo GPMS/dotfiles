@@ -1,7 +1,6 @@
 #!/bin/sh
 
 WM=$XDG_CURRENT_DESKTOP
-isKnownWM=true
 
 suspend="Suspend"
 reboot="Reboot"
@@ -11,11 +10,12 @@ if [ "$WM" = "i3" ]; then
     reload="Reload WM"
     restart="Restart WM"
     quit="Quit WM"
+    isKnownWM=true
 else
     isKnownWM=false
 fi
 
-if [ $isKnownWM ]; then
+if [ $isKnownWM == true ]; then
     content="$reload\n$restart\n$quit\n$suspend\n$reboot\n$shutdown"
 else
     content="$suspend\n$reboot\n$shutdown"
@@ -29,7 +29,7 @@ Restart()
     i3-msg "[instance="dropdown"] move position center"
 }
 
-selection=$(echo "$content" | dmenu -i -c -l 6 -bw 5)
+selection=$(echo -e "$content" | dmenu -i -c -l 6 -bw 5)
 case $selection in
     "$reload")
         case $WM in
