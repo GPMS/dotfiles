@@ -20,7 +20,7 @@ super + d
 ## XF86 Keys ##
 
 Print
-    scrot
+    scrot ~/Pictures/%Y-%m-%d-%H%M%S.png
 
 # Volume
 XF86AudioRaiseVolume
