@@ -8,7 +8,7 @@ fi
 
 cleanSearchTerm=$(echo $searchTerm | tr ' ' '+')
 
-option=$(echo "Google\nYouTube\nReddit\nArch Wiki\n" | dmenu -i -c -l 8 -p "Search on:" )
+option=$(echo -e "Google\nYouTube\nReddit\nArch Wiki\n" | dmenu -i -c -l 8 -p "Search on:" )
 case $option in
     "Google")
         url="www.google.com/search?q=$cleanSearchTerm"
